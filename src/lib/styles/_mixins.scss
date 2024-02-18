@@ -1,0 +1,27 @@
+$breakpoints: (
+	sm: 320px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1440px,
+	xxl: 1920px
+);
+
+@mixin breakpoint($point) {
+	@if map-has-key($breakpoints, $point) {
+		@media screen and (min-width: map-get($breakpoints, $point)) {
+			@content;
+		}
+	} @else {
+		@warn "Invalid breakpoint: #{$point}.";
+	}
+}
+
+@mixin responsive($prop, $baseVal, $vals...) {
+	#{$prop}: #{$baseVal};
+
+	@each $breakpoint, $value in keywords($vals) {
+		@include breakpoint($breakpoint) {
+			#{$prop}: #{$value};
+		}
+	}
+}
