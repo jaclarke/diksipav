@@ -5,10 +5,13 @@
 </script>
 
 <Layout>
-	<div class="wrapper">{@html data.blog.content}</div>
+	<div class="wrapper">
+		<!-- {@html data.blog.content} -->
+		<svelte:component this={data.component} />
+	</div>
 </Layout>
 
-<style>
+<style lang="scss">
 	.wrapper {
 		grid-area: main;
 	}

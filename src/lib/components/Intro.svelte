@@ -41,7 +41,6 @@
 
 		.text {
 			text-align: center;
-			max-width: 500px;
 			position: relative;
 
 			.top-margin {
