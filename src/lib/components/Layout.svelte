@@ -7,9 +7,9 @@
 
 		@include breakpoint(md) {
 			display: grid;
-			grid-template-columns: auto 600px auto;
+			grid-template-columns: auto 560px auto;
 			grid-template-areas: 'left main right';
-			padding: 0;
+			padding: 0 0 80px 0;
 		}
 	}
 </style>

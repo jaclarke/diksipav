@@ -1,11 +1,13 @@
 <script>
 	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+
 	import '../app.scss';
 </script>
 
 <div class="header-wrapper">
 	<div class="header">
-		<a href="/"><h1>dijana pavlović</h1></a>
+		<a href="/" class="logo">dijana pavlović</a>
 		<Nav />
 	</div>
 </div>
@@ -14,6 +16,7 @@
 		<slot />
 	</main>
 </div>
+<Footer />
 
 <style lang="scss">
 	.header-wrapper {
@@ -70,27 +73,30 @@
 				border-top: $border;
 			}
 
-			h1 {
+			.logo {
 				color: #acaaa6;
-			}
-
-			a {
-				cursor: pointer;
+				border: none;
+				font-family: THICCCBOI-ExtraBold, Arial, sans-serif;
+				font-size: 28px;
+				line-height: 34px;
+				font-weight: 700;
+				margin: 0px;
+				padding: 6px 0px 8px 0px;
 				@include responsive(width, 124px, $md: fit-content);
-				&:hover {
-					border: none;
+
+				@include breakpoint(md) {
+					padding: 16px 0 20px 0;
+					font-size: 32px;
+					line-height: 40px;
 				}
 			}
 		}
 	}
 
 	.main-wrapper {
-		min-height: calc(100vh - 96px);
-		@include responsive(padding, 0 12px 12px, $md: 0 20px 20px);
+		min-height: calc(100vh - 130.5px);
+		@include responsive(padding, 0 12px, $md: 0 20px);
 		display: flex;
-		@include breakpoint(md) {
-			padding: 0 20px 20px;
-		}
 
 		main {
 			$border: 1px solid #acaaa6;
