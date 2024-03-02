@@ -88,7 +88,7 @@ Several popular CSS reset/normalization libraries incorporate some variation of 
 
 ## More resources
 
-Thanks for reading! 😊 Here are additional resources if you ever feel inclined to read more about all this.
+Thanks for reading! 😊 Here are additional resources if you ever feel inclined to read more about this.
 
 - [drafts.csswg.org](https://drafts.csswg.org/css-size-adjust/#adjustment-control)
 
