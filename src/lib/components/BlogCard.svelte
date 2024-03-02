@@ -23,6 +23,11 @@
 		border-radius: 8px;
 		cursor: pointer;
 		max-width: 540px;
+		transition: border-color 0.4s;
+
+		&:hover {
+			border-color: #7e7e7e;
+		}
 
 		.desc {
 			font-size: 15px;
