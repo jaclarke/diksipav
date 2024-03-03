@@ -62,7 +62,7 @@ body {
 	}
 
 	p {
-		font-size: 17px;
+		font-size: 18px;
 		line-height: 1.5;
 		margin: 0 0 4px 0;
 
@@ -88,19 +88,19 @@ body {
 	}
 
 	h1 {
-		font-size: 26px;
+		font-size: 28px;
 		padding: 6px 0px 24px 0px;
 		color: var(--heading-color);
 		max-width: 480px;
 	}
 
 	h2 {
-		font-size: 20px;
+		font-size: 22px;
 		padding: 32px 0px 16px 0px;
 	}
 
 	h3 {
-		font-size: 18px;
+		font-size: 20px;
 		padding: 8px 0px 0px 0px;
 		color: var(--heading-color);
 	}
@@ -116,7 +116,7 @@ body {
 	}
 
 	small {
-		font-size: 11px;
+		font-size: 13px;
 		color: #9a9995;
 	}
 
@@ -137,7 +137,7 @@ body {
 
 		code[class*='language-'] {
 			padding: 0;
-			font-size: 15px;
+			font-size: 16px;
 			background: #312d2c;
 		}
 	}
@@ -167,7 +167,7 @@ body {
 		border: 1px solid rgba(255,203,107, 0.8); 
 
 		p {
-			font-size: 15px;
+			font-size: 16px;
 		}
 
 		p:first-of-type::before {
