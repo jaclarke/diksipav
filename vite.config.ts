@@ -10,7 +10,7 @@ export default defineConfig({
 			scss: {
 				additionalData: `
 				  @import '$lib/styles/_mixins.scss';
-					@import '$lib/styles/vsc-dark-plus.css';
+					@import '$lib/styles/material-dark.css';
 
         `
 			}

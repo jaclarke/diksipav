@@ -68,7 +68,7 @@ body {
 
 <div class="note">
 <p>
-NOTE: For iOS safari only <code>-webkit-text-size-adjust</code> works but I included other vendors and a non-vendor property to add support for other browsers. It's very important to add the non-vendor property at the beginning. If added at the end, in Safari iOS it will override the -webkit one and since it's not supported it will not be applied, so things will work as default.
+For iOS safari only <code>-webkit-text-size-adjust</code> works but I included other vendors and a non-vendor property to add support for other browsers. It's very important to add the non-vendor property at the beginning. If added at the end, in Safari iOS it will override the -webkit one and since it's not supported it will not be applied, so things will work as default.
 </p>
 </div>
 
