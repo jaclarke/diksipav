@@ -162,12 +162,11 @@ body {
 	}
 
 	.note {
-		border-radius: 4px;
 		border: 1px solid rgba(255,203,107, 0.8); 
-		@include responsive(margin, 0 -12px 32px -12px, $md: 0 -24px 32px -24px);
-		@include responsive(padding,  10px 12px 8px 12px, $md: 21px 24px 14px 24px);
-
-		// @include responsive()
+		margin: 0 -24px 32px -24px;
+		padding: 21px 24px 14px 24px;
+		background: var(--bg-color);
+		@include responsive(border-radius, 0, $md: 4px);
 
 
 		p {
@@ -190,6 +189,8 @@ body {
 		column-gap: 56px;
 		justify-content: center;
 		margin: 0 -24px 28px -24px;
+		@include responsive(flex-direction, column, $md: row);
+		align-items:center;
 
 		p {
 			margin-bottom: 0;
