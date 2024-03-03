@@ -11,6 +11,6 @@
 	}
 	p {
 		text-align: center;
-		max-width: 190px;
+		max-width: 206px;
 	}
 </style>
