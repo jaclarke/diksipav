@@ -75,7 +75,7 @@
 				color: #acaaa6;
 				border: none;
 				font-family: THICCCBOI-ExtraBold, Arial, sans-serif;
-				@include responsive(font-size, 28px, $md: 30px);
+				font-size: 30px;
 				line-height: 34px;
 				font-weight: 700;
 				margin: 0px;
