@@ -2,7 +2,7 @@
 
 body {
 	--bg-color: #1f1f1f;
-	--font-color: #b3b3b3;
+	--font-color: #bdbdbd;
 	--heading-color: #ccc;
 	--link-color: #5797ae;
 
@@ -55,13 +55,13 @@ body {
 	}
 
 	p {
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 1.5;
 		margin: 0 0 4px 0;
 
 		img {
 			max-width: 200px;
-			border-radius: 8px;
+			border-radius: 4px;
 			margin-top: 20px;
 		}
 	}
@@ -114,16 +114,22 @@ body {
 
 	code {
 		padding: 2px 5px 4px 5px;
-		font-size: 95%;
-		background-color: #0f0f0f;
-		border-radius: 4px;
+		font-size: 98%;
+		background: #391c31;
+		border-radius: 2px;
 	}
 
 	pre[class*='language-'] {
-		background: #0f0f0f;
+		background:#1f0f1a;
 		padding: 10px 8px;
-		border-radius: 8px;
+		border-radius: 4px;
 		margin: 16px -24px 28px -24px;
+
+		code[class*='language-'] {
+			background:#1f0f1a;
+
+			font-size: 15px;
+		}
 	}
 
 	ul {
@@ -146,9 +152,12 @@ body {
 
 	.note {
 		margin: 0 -24px 32px -24px;
-		border-radius: 8px;
-		padding: 10px 12px 6px 12px;
+		border-radius: 4px;
+		padding: 20px 24px 14px 24px;
 		background: #303030;
+		p {
+			font-size: 15px;
+		}
 	}
 
 	.md-images {

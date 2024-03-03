@@ -51,16 +51,3 @@ export async function getAllBlogs() {
 
 	return blogs.sort((a, b) => b.frontmatter.date - a.frontmatter.date);
 }
-
-export async function processBlog(filename: string) {
-	const blog = await getBlog(filename + '.svx');
-
-	if (!blog) {
-		throw new Error(`Blog with name: ${filename} does not exist.`);
-	}
-
-	return {
-		...blog.frontmatter,
-		content: await processMarkdown(blog.content)
-	};
-}
