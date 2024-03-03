@@ -135,7 +135,7 @@ body {
 		padding: 14px 24px;
 		margin: 16px -24px 28px -24px;
 		@include responsive(border-radius, 0, $md: 4px);
-		@include responsive(width, min(100vw, 556px), $md: unset);
+		@include responsive(width, min(calc(100vw - 1px), 556px), $md: unset);
 
 		code[class*='language-'] {
 			padding: 0;
