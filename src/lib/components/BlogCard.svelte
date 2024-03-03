@@ -3,6 +3,7 @@
 	import { format } from 'date-fns';
 
 	export let frontmatter: FrontMatter;
+	console.log('frontmatter', frontmatter);
 </script>
 
 <a class="card" href={getFilenameFromTitle(frontmatter.title, 'read')}>

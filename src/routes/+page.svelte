@@ -1,7 +1,6 @@
 <script>
 	import BlogCard from '$lib/components/BlogCard.svelte';
 	import Intro from '$lib/components/Intro.svelte';
-	// import '$lib/fonts';
 
 	export let data;
 </script>
@@ -11,7 +10,7 @@
 	<p class="dots">. . .</p>
 	<div class="latest">
 		<p class="title">Latest:</p>
-		{#each data.blogs.slice(0, 3) as { frontmatter } (frontmatter.id)}
+		{#each data.blogs.slice(0, 3) as frontmatter (frontmatter.id)}
 			<BlogCard {frontmatter} />
 		{/each}
 	</div>
