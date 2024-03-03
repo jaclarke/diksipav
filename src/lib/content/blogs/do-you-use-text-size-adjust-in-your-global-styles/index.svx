@@ -10,10 +10,10 @@ tags: '#css #browser'
 
 {desc} Trying to fix this by applying different font sizes in dev tools, and even using `!important` had no effect. You can see below the desired screen display and the screen I ended up seeing.
 
-<!-- <div class="md-images">
+<div class="md-images">
 <div>
 
-![Intended page display](/src/lib/images/text-size-good.jpg)
+![Intended page display](./text-size-good.jpg)
 
 <small >
 Intended page display
@@ -21,13 +21,13 @@ Intended page display
 </div>
 <div>
 
-![Unexpected text scaling](/src/lib/images/text-size-bad.jpg)
+![Unexpected text scaling](./text-size-bad.jpg)
 
 <small>
 Unexpected test scaling
 </small>
 </div>
-</div> -->
+</div>
 
 ## Understanding what's going on
 

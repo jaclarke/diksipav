@@ -11,7 +11,7 @@ const blogSchema = z.object({
 });
 
 
-const blogsDir = import.meta.glob('$lib/content/blogs/*.svx', {
+const blogsDir = import.meta.glob('$lib/content/blogs/**/*.svx', {
 	query: 'url',
 	eager: true
 });
