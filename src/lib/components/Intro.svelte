@@ -52,8 +52,8 @@
 		@include responsive(display, none, $md: block);
 		@include responsive(transform, none, $md: scale(0.84), $xl: none);
 		position: absolute;
-		@include responsive(bottom, -20px, $xl: -66px);
-		@include responsive(right, 208px, $xl: 200px);
+		@include responsive(bottom, -20px, $xl: -48px);
+		@include responsive(right, 208px, $xl: 170px);
 		opacity: 0.3;
 		z-index: -1;
 	}
