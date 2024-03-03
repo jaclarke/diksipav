@@ -22,8 +22,7 @@
 	.header-wrapper {
 		position: sticky;
 		top: 0px;
-		@include responsive(background-color, rgba(31, 31, 31, 0.8), $xl: unset);
-		padding: 12px 12px 0 12px;
+		@include responsive(background-color, rgba(33, 33, 33, 0.8), $xl: unset);
 		@include responsive(padding, 12px 12px 0 12px, $md: 20px 20px 0 20px);
 
 		&::before {
@@ -44,8 +43,7 @@
 			align-items: center;
 			height: 80px;
 			position: relative;
-			padding: 0 20px;
-			@include responsive(padding, 0 12px, $md: 0 20px);
+			@include responsive(padding, 0 10px 0 12px, $md: 0 20px);
 
 			$border: 1px solid #acaaa6;
 			border-left: $border;
@@ -77,7 +75,7 @@
 				color: #acaaa6;
 				border: none;
 				font-family: THICCCBOI-ExtraBold, Arial, sans-serif;
-				font-size: 30px;
+				@include responsive(font-size, 28px, $md: 30px);
 				line-height: 34px;
 				font-weight: 700;
 				margin: 0px;

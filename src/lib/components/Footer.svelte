@@ -5,7 +5,7 @@
 		text-align: right;
 		padding-bottom: 16px;
 		border-left: 1px solid #acaaa6;
-		margin: 0 20px;
+		@include responsive(margin, 0 24px 0 12px, $md: 0 20px);
 
 		small {
 			font-size: 14px;

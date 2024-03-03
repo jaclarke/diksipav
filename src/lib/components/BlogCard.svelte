@@ -17,7 +17,7 @@
 	.card {
 		display: block;
 		border: 1px solid hsla(0, 0%, 100%, 0.15);
-		@include responsive(padding, 6px 16px 12px 16px, $md: 6px 20px 12px 20px);
+		@include responsive(padding, 2px 16px 12px 16px, $md: 10px 24px 20px 24px);
 		margin-bottom: 16px;
 		/* box-shadow: 0px 32px 40px -24px rgba(0, 0, 0, 0.25); */
 		border-radius: 8px;
