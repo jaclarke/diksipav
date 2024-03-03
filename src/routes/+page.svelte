@@ -20,8 +20,8 @@
 	.container {
 		height: 100%;
 		@include responsive(padding, 0 12px, $md: 0);
-
 		@include responsive(display, block, $xl: grid);
+		@include responsive(max-width, 600px, $xl: unset);
 		grid-template-columns: 1fr 514px 1fr 514px 1fr;
 		grid-template-areas: 'left intro middle latest right';
 	}
@@ -35,7 +35,7 @@
 		.title {
 			align-self: start;
 			padding: 0 0 8px 20px;
-			@include responsive(display, none, $lg: block);
+			@include responsive(display, none, $xl: block);
 			font-size: 14px;
 		}
 	}

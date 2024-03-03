@@ -130,15 +130,16 @@ body {
 	}
 
 	pre[class*='language-'] {
-		background:#312d2c;;
+		position: static;
+		background: #312d2c;
 		padding: 14px 24px;
 		margin: 16px -24px 28px -24px;
-		@include responsive(border-radius, 0, $md:4px);
-		@include responsive(width, 100vw, $md:unset);
+		@include responsive(border-radius, 0, $md: 4px);
+		@include responsive(width, min(100vw, 556px), $md: unset);
 
 		code[class*='language-'] {
 			padding: 0;
-			@include responsive(font-size, 15px, $md:16px);
+			@include responsive(font-size, 15px, $md: 16px);
 			background: #312d2c;
 		}
 	}
@@ -162,25 +163,23 @@ body {
 	}
 
 	.note {
-		border: 1px solid rgba(255,203,107, 0.8); 
+		border: 1px solid #cca255;
 		margin: 0 -24px 32px -24px;
 		padding: 21px 24px 14px 24px;
 		background: var(--bg-color);
 		@include responsive(border-radius, 0, $md: 4px);
 
-
 		p {
-			@include responsive(font-size, 16px, $md:17px);
+			@include responsive(font-size, 16px, $md: 17px);
 		}
 
 		p:first-of-type::before {
-				content: "NOTE:";
-				top: 20px;
-				left: 24px;
-				padding-right: 4px;
-				color: rgb(255,203,107);
-				opacity: 0.8;
-				font-family: THICCCBOI-Medium;
+			content: 'NOTE:';
+			top: 20px;
+			left: 24px;
+			padding-right: 4px;
+			color: #cca255;
+			font-family: THICCCBOI-Medium;
 		}
 	}
 
@@ -190,7 +189,7 @@ body {
 		justify-content: center;
 		margin: 0 -24px 28px -24px;
 		@include responsive(flex-direction, column, $md: row);
-		align-items:center;
+		align-items: center;
 
 		p {
 			margin-bottom: 0;

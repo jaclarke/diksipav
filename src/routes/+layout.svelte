@@ -55,7 +55,7 @@
 			}
 
 			&::before {
-				@include responsive(width, 100px, $xl: 380px);
+				@include responsive(width, 100px, $xl: 318px, $xxl: 380px);
 				height: 1px;
 				left: 0;
 				top: -1px;
@@ -101,6 +101,9 @@
 			border-left: $border;
 			flex-grow: 1;
 			padding-top: 40px;
+			padding-bottom: 80px;
+			@include responsive(display, flex, $xl: block);
+			justify-content: center;
 		}
 	}
 </style>

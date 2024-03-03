@@ -20,9 +20,8 @@
 		@include responsive(padding, 2px 16px 12px 16px, $md: 10px 24px 20px 24px);
 		margin-bottom: 16px;
 		/* box-shadow: 0px 32px 40px -24px rgba(0, 0, 0, 0.25); */
+		/* @include responsive(max-width, 540px, $lg: unset); */
 		border-radius: 8px;
-		cursor: pointer;
-		max-width: 540px;
 		transition: border-color 0.4s;
 
 		&:hover {
