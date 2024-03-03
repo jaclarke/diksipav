@@ -91,6 +91,7 @@ body {
 		font-size: 26px;
 		padding: 6px 0px 24px 0px;
 		color: var(--heading-color);
+		max-width: 480px;
 	}
 
 	h2 {
@@ -120,23 +121,24 @@ body {
 	}
 
 	code {
-		padding: 1px 4px 3px 4px;
+		padding: 1px 3px 2px 3px;
 		font-size: 98%;
-		background: #3a3a3a;
+		background: #3b3635;
 		border-radius: 2px;
 		color: #f96c6c;
 		font-family: THICCCBOI-Medium;
 	}
 
 	pre[class*='language-'] {
-		background:#303030;
-		padding: 10px 8px;
+		background:#312d2c;;
+		padding: 10px 20px;
 		border-radius: 4px;
-		margin: 16px -24px 28px -24px;
+		margin: 16px -20px 28px -20px;
 
 		code[class*='language-'] {
+			padding: 0;
 			font-size: 15px;
-			background: #303030;
+			background: #312d2c;
 		}
 	}
 
@@ -159,10 +161,10 @@ body {
 	}
 
 	.note {
-		margin: 0 -24px 32px -24px;
+		margin: 0 -20px 32px -20px;
 		border-radius: 4px;
-		padding: 20px 24px 14px 24px;
-		border: 1px solid rgba(255,203,107, 0.7); 
+		padding: 18px 20px 12px 20px;
+		border: 1px solid rgba(255,203,107, 0.8); 
 
 		p {
 			font-size: 15px;
@@ -173,7 +175,7 @@ body {
 				top: 20px;
 				left: 24px;
 				padding-right: 4px;
-				color: rgba(255,203,107, 0.9);
+				color: rgb(255,203,107);
 				opacity: 0.8;
 				font-family: THICCCBOI-Medium;
 		}
