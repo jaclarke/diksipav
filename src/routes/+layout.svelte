@@ -77,7 +77,7 @@
 				color: #acaaa6;
 				border: none;
 				font-family: THICCCBOI-ExtraBold, Arial, sans-serif;
-				font-size: 28px;
+				font-size: 30px;
 				line-height: 34px;
 				font-weight: 700;
 				margin: 0px;

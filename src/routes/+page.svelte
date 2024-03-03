@@ -36,7 +36,7 @@
 			align-self: start;
 			padding: 0 0 8px 20px;
 			@include responsive(display, none, $lg: block);
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 

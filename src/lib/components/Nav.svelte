@@ -17,7 +17,7 @@
 		a {
 			--link-color: #acaaa6;
 
-			font-size: 16px;
+			font-size: 17px;
 			line-height: 20px;
 			opacity: 0.9;
 			font-weight: 300;

@@ -8,7 +8,7 @@
 		margin: 0 20px;
 
 		small {
-			font-size: 13px;
+			font-size: 14px;
 		}
 	}
 </style>
