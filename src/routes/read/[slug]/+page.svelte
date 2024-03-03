@@ -6,7 +6,6 @@
 
 <Layout>
 	<div class="wrapper">
-		<!-- {@html data.blog.content} -->
 		<svelte:component this={data.component} />
 	</div>
 </Layout>
