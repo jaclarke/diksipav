@@ -2,12 +2,11 @@
 	<p>I don't have any talks yet. Working on it. 😊</p>
 </div>
 
-<style>
+<style lang="scss">
 	.wrapper {
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		padding-top: 8vh;
+		@include responsive(padding-top, 100px, $md: 8vh);
 	}
 	p {
 		text-align: center;
