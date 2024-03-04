@@ -52,6 +52,7 @@
 			&::after {
 				position: absolute;
 				content: '';
+				pointer-events: none;
 			}
 
 			&::before {
