@@ -24,7 +24,7 @@ Intended page display
 ![Unexpected text scaling](./text-size-bad.jpg)
 
 <small>
-Unexpected test scaling
+Unexpected text scaling
 </small>
 </div>
 </div>
