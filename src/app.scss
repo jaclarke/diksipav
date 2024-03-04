@@ -1,9 +1,9 @@
-@import '$lib/styles/vsc-dark-plus.css';
+@import '$lib/styles/material-dark.css';
 
 body {
-	--bg-color: #1f1f1f;
-	--font-color: #b3b3b3;
-	--heading-color: #ccc;
+	--bg-color: #212121;
+	--font-color: #bdbdbd;
+	--heading-color: #d6d6d6;
 	--link-color: #5797ae;
 
 	background-color: var(--bg-color);
@@ -14,6 +14,13 @@ body {
 	@font-face {
 		font-family: 'THICCCBOI-Regular';
 		src: url('$lib/fonts/THICCCBOI-Regular.woff2') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'THICCCBOI-Medium';
+		src: url('$lib/fonts/THICCCBOI-Medium.woff2') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -55,13 +62,13 @@ body {
 	}
 
 	p {
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 1.5;
 		margin: 0 0 4px 0;
 
 		img {
 			max-width: 200px;
-			border-radius: 8px;
+			border-radius: 4px;
 			margin-top: 20px;
 		}
 	}
@@ -76,23 +83,24 @@ body {
 			-apple-system,
 			Arial,
 			sans-serif;
-		line-height: 1.5;
+		line-height: 1.3;
 		margin: 0px;
 	}
 
 	h1 {
-		font-size: 26px;
-		padding: 6px 0px 16px 0px;
+		font-size: 28px;
+		padding: 6px 0px 24px 0px;
 		color: var(--heading-color);
+		max-width: 480px;
 	}
 
 	h2 {
-		font-size: 20px;
+		font-size: 22px;
 		padding: 32px 0px 16px 0px;
 	}
 
 	h3 {
-		font-size: 18px;
+		font-size: 20px;
 		padding: 8px 0px 0px 0px;
 		color: var(--heading-color);
 	}
@@ -108,22 +116,32 @@ body {
 	}
 
 	small {
-		font-size: 11px;
+		font-size: 13px;
 		color: #9a9995;
 	}
 
 	code {
-		padding: 2px 5px 4px 5px;
-		font-size: 95%;
-		background-color: #0f0f0f;
-		border-radius: 4px;
+		padding: 1px 3px 2px 3px;
+		font-size: 98%;
+		background: #3b3635;
+		border-radius: 2px;
+		color: #f96c6c;
+		font-family: THICCCBOI-Medium;
 	}
 
 	pre[class*='language-'] {
-		background: #0f0f0f;
-		padding: 10px 8px;
-		border-radius: 8px;
+		position: static;
+		background: #312d2c;
+		padding: 14px 24px;
 		margin: 16px -24px 28px -24px;
+		@include responsive(border-radius, 0, $md: 4px);
+		@include responsive(width, min(calc(100vw - 1px), 556px), $md: unset);
+
+		code[class*='language-'] {
+			padding: 0;
+			@include responsive(font-size, 15px, $md: 16px);
+			background: #312d2c;
+		}
 	}
 
 	ul {
@@ -131,7 +149,7 @@ body {
 		margin-bottom: 28px;
 
 		li {
-			font-size: 16px;
+			font-size: 18px;
 			line-height: 1.5;
 		}
 
@@ -145,10 +163,24 @@ body {
 	}
 
 	.note {
+		border: 1px solid #cca255;
 		margin: 0 -24px 32px -24px;
-		border-radius: 8px;
-		padding: 10px 12px 6px 12px;
-		background: #303030;
+		padding: 21px 24px 14px 24px;
+		background: var(--bg-color);
+		@include responsive(border-radius, 0, $md: 4px);
+
+		p {
+			@include responsive(font-size, 16px, $md: 17px);
+		}
+
+		p:first-of-type::before {
+			content: 'NOTE:';
+			top: 20px;
+			left: 24px;
+			padding-right: 4px;
+			color: #cca255;
+			font-family: THICCCBOI-Medium;
+		}
 	}
 
 	.md-images {
@@ -156,6 +188,8 @@ body {
 		column-gap: 56px;
 		justify-content: center;
 		margin: 0 -24px 28px -24px;
+		@include responsive(flex-direction, column, $md: row);
+		align-items: center;
 
 		p {
 			margin-bottom: 0;

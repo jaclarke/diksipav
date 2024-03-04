@@ -1,5 +1,6 @@
 export function getFilenameFromTitle(title: string, prefix: string) {
-	return `${prefix}/${title.toLowerCase().split(' ').join('-')}`;
+	const fileName =  `${prefix}/${title.toLowerCase().split(' ').join('-')}`;
+	return (fileName[fileName.length -1] === "?") ? fileName.slice(0, -1) : fileName;
 }
 
 export interface FrontMatter {

@@ -6,14 +6,14 @@ desc: Recently, I stumbled upon an enigmatic CSS issue that manifested only on r
 tags: '#css #browser'
 ---
 
-# Do you use text-size-adjust in your global styles?
+# {title}
 
 {desc} Trying to fix this by applying different font sizes in dev tools, and even using `!important` had no effect. You can see below the desired screen display and the screen I ended up seeing.
 
 <div class="md-images">
 <div>
 
-![Intended page display](/src/lib/images/text-size-good.jpg)
+![Intended page display](./text-size-good.jpg)
 
 <small >
 Intended page display
@@ -21,7 +21,7 @@ Intended page display
 </div>
 <div>
 
-![Unexpected text scaling](/src/lib/images/text-size-bad.jpg)
+![Unexpected text scaling](./text-size-bad.jpg)
 
 <small>
 Unexpected test scaling
@@ -64,11 +64,11 @@ body {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-```
+``` 
 
 <div class="note">
 <p>
-NOTE: For iOS safari only <code>-webkit-text-size-adjust</code> works but I included other vendors and a non-vendor property to add support for other browsers. It's very important to add the non-vendor property at the beginning. If added at the end, in Safari iOS it will override the -webkit one and since it's not supported it will not be applied, so things will work as default.
+For iOS safari only <code>-webkit-text-size-adjust</code> works but I included other vendors and a non-vendor property to add support for other browsers. It's very important to add the non-vendor property at the beginning. If added at the end, in Safari iOS it will override the -webkit one and since it's not supported it will not be applied, so things will work as default.
 </p>
 </div>
 

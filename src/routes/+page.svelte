@@ -1,7 +1,6 @@
 <script>
 	import BlogCard from '$lib/components/BlogCard.svelte';
 	import Intro from '$lib/components/Intro.svelte';
-	// import '$lib/fonts';
 
 	export let data;
 </script>
@@ -11,7 +10,7 @@
 	<p class="dots">. . .</p>
 	<div class="latest">
 		<p class="title">Latest:</p>
-		{#each data.blogs.slice(0, 3) as { frontmatter } (frontmatter.id)}
+		{#each data.blogs.slice(0, 3) as frontmatter (frontmatter.id)}
 			<BlogCard {frontmatter} />
 		{/each}
 	</div>
@@ -21,8 +20,8 @@
 	.container {
 		height: 100%;
 		@include responsive(padding, 0 12px, $md: 0);
-
 		@include responsive(display, block, $xl: grid);
+		@include responsive(max-width, 600px, $xl: unset);
 		grid-template-columns: 1fr 514px 1fr 514px 1fr;
 		grid-template-areas: 'left intro middle latest right';
 	}
@@ -36,8 +35,8 @@
 		.title {
 			align-self: start;
 			padding: 0 0 8px 20px;
-			@include responsive(display, none, $lg: block);
-			font-size: 12px;
+			@include responsive(display, none, $xl: block);
+			font-size: 14px;
 		}
 	}
 
