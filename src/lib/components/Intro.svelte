@@ -42,7 +42,6 @@
 		.text {
 			text-align: center;
 			position: relative;
-			z-index: -1;
 
 			.top-margin {
 				margin-top: 16px;

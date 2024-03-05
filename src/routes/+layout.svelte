@@ -24,6 +24,7 @@
 		top: 0px;
 		@include responsive(background-color, rgba(33, 33, 33, 0.8), $xl: unset);
 		@include responsive(padding, 12px 12px 0 12px, $md: 20px 20px 0 20px);
+		z-index: 1;
 
 		&::before {
 			position: absolute;
