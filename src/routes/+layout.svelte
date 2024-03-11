@@ -56,7 +56,7 @@
 			}
 
 			&::before {
-				@include responsive(width, 100px, $xl: 318px, $xxl: 380px);
+				@include responsive(width, 142px, $md: 278px, $xl: 300px, $xxl: 340px);
 				height: 1px;
 				left: 0;
 				top: -1px;
@@ -65,7 +65,7 @@
 
 			&::after {
 				@include responsive(height, 80px, $xl: 150px);
-				@include responsive(width, calc(100vw - 126px), $md: calc(100vw - 142px), $xl: 100px);
+				@include responsive(width, calc(100vw - 168px), $md: calc(100vw - 320px), $xl: 100px);
 				right: 0;
 				top: -1px;
 				border-right: $border;

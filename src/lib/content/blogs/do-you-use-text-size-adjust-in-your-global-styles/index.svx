@@ -15,7 +15,7 @@ tags: '#css #browser'
 
 ![Intended page display](./text-size-good.jpg)
 
-<small >
+<small>
 Intended page display
 </small>
 </div>
@@ -24,7 +24,7 @@ Intended page display
 ![Unexpected text scaling](./text-size-bad.jpg)
 
 <small>
-Unexpected test scaling
+Unexpected text scaling
 </small>
 </div>
 </div>
