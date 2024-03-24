@@ -100,9 +100,8 @@ body {
 	}
 
 	h3 {
-		font-size: 20px;
-		padding: 8px 0px 0px 0px;
-		color: var(--heading-color);
+		font-size: 18px;
+		padding: 20px 0px 8px 0px;
 	}
 
 	a {
@@ -164,7 +163,7 @@ body {
 
 	.note {
 		border: 1px solid #cca255;
-		margin: 0 -24px 32px -24px;
+		margin: 24px -24px 32px -24px;
 		padding: 21px 24px 14px 24px;
 		background: var(--bg-color);
 		@include responsive(border-radius, 0, $md: 4px);
