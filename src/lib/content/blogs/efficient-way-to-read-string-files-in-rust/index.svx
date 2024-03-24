@@ -2,7 +2,7 @@
 id: aa37b1f0-0017-11ea-9149-d386e8a6bf6f
 title: Efficient way to read string files in Rust
 date: 2024-03-25
-desc: Welcome to this exploration of different methods for reading files in Rust!. As a frontend engineer with a huge curiosity for backend and low-level systems, delving into Rust is such an enjoyable journey.
+desc: Welcome to this exploration of different methods for reading files in Rust. As a frontend engineer with a huge curiosity for backend and low-level systems, delving into Rust is such an enjoyable journey.
 tags: '#rust'
 ---
 
@@ -220,13 +220,14 @@ is really convenient but it has a big performance problem - the iterator returns
 an owned String so we need to allocate a new string on the heap for every single line in the file. 
 While memory allocation itself is generally fast, the overhead of allocating 
 and deallocating memory for each line can become significant, especially for 
-large files with many short lines (which is my string file).
+large files with many short lines (which is my text file).
 
 ## Ok, now really better approach
 
 So, the obvious "fix" to the previous approach is to create manually a `String` buffer 
-and read line by line into this buffer. This means we only ever have one string buffer 
-and there is no allocation and dealocation of heap memory for every line.
+and read line by line into this buffer (I named this buffer `line`). This means 
+we only ever have one string buffer and there is no allocation and dealocation of 
+heap memory for every line (if new line is longer than previous one there will be new allocation). 
 Before filling the buffer with new line we clear the buffer (if the new line is 
 shorter than the previous one/ones and we don't clear the buffer it will end up with 
 data from both/multiple lines).
@@ -243,21 +244,21 @@ pub fn read_file_line_by_line_better(args: &Cli) -> Result<(), Box<dyn std::erro
     let f = File::open(&args.path)
         .with_context(|| format!("Could not read the file {}", args.path.display()))?;
 
-    let mut reader = BufReader::with_capacity(1, f);
-    let mut buffer = String::new();
+    let mut reader = BufReader::new(f);
+    let mut line = String::new();
 
     loop {
-        let len = reader.read_line(&mut buffer)?;
+        let len = reader.read_line(&mut line)?;
 
         if len == 0 {
             break;
         }
 
-        if buffer.contains(&args.pattern) {
-            println!("{}", buffer.trim());
+        if line.contains(&args.pattern) {
+            println!("{}", line.trim());
         }
 
-        buffer.clear();
+        line.clear();
     }
 
     Ok(())
@@ -270,13 +271,18 @@ After running the tool few times it has been confirmed that this approach is
 indeed superior to the two previous methods. The tool took 110ms, 107ms and 110ms 
 (for 3 consecutive calls) to read the file and print the lines.
 
-<div class="note">
-<p>
-    The default buffer size is 8 KiB which is too much for the lines my text file has.
-    I was playing a bit with this and found that the size of around 3 KiB gives the same performanse.
-    You can adjust the size of the buffer when you create it using  `let mut reader = BufReader::with_capacity(3000, f);`
-</p>
-</div>
+
+### Adjust the size of the buffer
+
+The default buffer size is `8 KiB` which is maybe too much for the lines my text file has.
+I was playing a bit with this and found that the size of around 3 KiB gives the same performanse.
+But keep in mind that the larger the size of the buffer, the fewer system calls will occur. 
+Try multiple values and test performance. You can adjust the size of the buffer when you create it using: 
+
+```rust
+let mut reader = BufReader::with_capacity(3000, f);
+```
+
 
 You should definitelly check the official docs for [BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html#) 
 to find out other ways you can use and configure it.
@@ -314,7 +320,10 @@ That work is the same whether you're reading one byte at a time or plenty.
 `BufReader` makes it so that the system calls always read a lot at a time even 
 when you only ask for a little bit of data, so that when you ask for the next 
 little bit of data it doesn't need to go through the work all over again (it 
-already has the requested data in the buffer).
+already has the requested data in the buffer). It's the same with lines in my example above, 
+it will read as many data it can in the buffer and will read lines from it
+into our `line` String buffer as long as there are full lines. Next time there is no 
+full line, `BufReader`` will create another system call and fill its buffer again.
 
 &nbsp;
 
