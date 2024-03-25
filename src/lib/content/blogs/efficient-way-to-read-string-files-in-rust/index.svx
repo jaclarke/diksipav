@@ -38,14 +38,14 @@ Focus is on finding performant way to read files from disk.
 
 ## Brief explanation of the simple grep tool
 
-Let's say my text file name is `random_text.txt` and I want to print only the lines 
-that contain `"hello world"`. To invoke the tool I'am using the following command:
+Let's say our text file name is `random_text.txt` and we want to print only the lines 
+that contain `"hello world"`. To invoke the tool we'll use the following command:
 
 ```bash
-$ cargo run "hello world" random_string.txt
+$ cargo run "hello world" random_text.txt
 ```
 
-Upon executing this command I should see in the terminal the appropriate lines.
+Upon executing this command we should see in the terminal the appropriate lines.
 If the file does not exist or is somehow corrupted, the tool will provide an 
 appropriate error message. 
 
@@ -123,9 +123,9 @@ intend to test another 2 approaches I'll just replace this function with another
 <div class="note">
 <p>
 A more elegant approach would involve adding support for an additional argument 
-that users can provide to the command-line tool. This argument would enable users 
+that users can provide to my grep tool. This argument would enable users 
 to specify their preferred method for reading the file. Based on the provided 
-argument, the tool would then invoke the corresponding function accordingly.
+argument, the tool would then invoke the corresponding function.
 </p>
 </div>
 
@@ -174,10 +174,12 @@ in three consecutive calls.
 
 The better approach is to use [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
 struct from the standard library. This struct adds buffering to any reader.
-A buffered reader is more efficient way to read from a file in Rust (true for 
+A buffered reader is usually more efficient way to read from a file in Rust (true for 
 other languages too), due to its ability to minimize the number of system calls 
 and improve performance by reading data in larger chunks and storing it in memory 
-for faster access.
+for faster access (check the section below about system calls). Its buffer size 
+is fixed (default is 8KiB, it is configurable) so for large files it will not store 
+the whole file in memory.
 
 &nbsp;
 
@@ -219,7 +221,7 @@ What?! Slower than the basic `read-to-string` solution? So I researched.
 
 The `lines()` method automatically attached to anything implementing `std::io::BufRead` trait 
 is really convenient but it has a big performance problem - the iterator returns 
-an owned String so we need to allocate a new string on the heap for every single line in the file. 
+an owned String so we need to allocate a new string on the heap for every line in the file. 
 While memory allocation itself is generally fast, the overhead of allocating 
 and deallocating memory for each line can become significant, especially for 
 large files with many short lines (which is my text file).
@@ -230,6 +232,9 @@ So, the obvious "fix" to the previous approach is to create manually a `String` 
 and read line by line into this buffer (I named this buffer `line`). This means 
 we only ever have one string buffer and there is no allocation and dealocation of 
 heap memory for every line (if new line is longer than previous one there will be new allocation). 
+
+&nbsp;
+
 Before filling the buffer with new line we clear the buffer (if the new line is 
 shorter than the previous one/ones and we don't clear the buffer it will end up with 
 data from both/multiple lines).
@@ -329,16 +334,17 @@ full line, `BufReader`` will create another system call and fill its buffer agai
 
 &nbsp;
 
-Using `read_to_string makes` is even more efficient in terms of the number of 
+Using `read_to_string` makes it even more efficient in terms of the number of 
 system calls, but if you're only using part of the file at a time it causes a 
 lot of unnecessary memory use. `BufReader` is intended to be a middle ground 
 without excessive memory usage or excessive system calls.
 
 &nbsp;
 
-This will be everything from me now. I hope someone learned something new. 
-Till next time! 🦀
-
+<p class="ending">
+That's all from me for now! I hope you've picked up something new. 
+Until next time, take care!! 🦀
+</p>
 
 
 
