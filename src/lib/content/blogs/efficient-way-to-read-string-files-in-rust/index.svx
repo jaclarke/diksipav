@@ -122,10 +122,10 @@ intend to test another 2 approaches I'll just replace this function with another
 
 <div class="note">
 <p>
-A more elegant approach would involve adding support for an additional argument 
-that users can provide to my grep tool. This argument would enable users 
+A more elegant approach would involve adding support for an additional flag 
+that users can provide to the grep command. This argument would enable users 
 to specify their preferred method for reading the file. Based on the provided 
-argument, the tool would then invoke the corresponding function.
+flag, the tool would then invoke the corresponding function.
 </p>
 </div>
 
