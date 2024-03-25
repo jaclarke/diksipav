@@ -342,8 +342,7 @@ without excessive memory usage or excessive system calls.
 &nbsp;
 
 <p class="ending">
-That's all from me for now! I hope you've picked up something new. 
-Until next time, take care!! 🦀
+    Until next time, take care! 🦀
 </p>
 
 
