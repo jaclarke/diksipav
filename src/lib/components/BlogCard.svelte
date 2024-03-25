@@ -7,7 +7,7 @@
 </script>
 
 <a class="card" href={getFilenameFromTitle(frontmatter.title, 'read')}>
-	<h3>{frontmatter.title}</h3>
+	<h4>{frontmatter.title}</h4>
 	<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
 	<p class="desc">{@html frontmatter.desc}</p>
 	<small>{frontmatter.tags}</small>
