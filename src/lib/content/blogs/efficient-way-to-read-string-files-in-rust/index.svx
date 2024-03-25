@@ -339,6 +339,23 @@ system calls, but if you're only using part of the file at a time it causes a
 lot of unnecessary memory use. `BufReader` is intended to be a middle ground 
 without excessive memory usage or excessive system calls.
 
+
+## Further performance improvements
+
+The `contains` method from Rust's standard library that I'm using in the examples 
+above to find a substring in a string is generally efficient for most use cases, 
+but its performance might degrade for very large strings or if you're doing many 
+substring checks in a tight loop. The primary reason for its potential slowness 
+in those scenarios is its implementation. In those cases it's advisable to explore 
+alternative approaches. Really good one is [memchr crate](https://docs.rs/memchr/latest/memchr/).
+
+&nbsp;
+
+In the example provided earlier, I demonstrated reading files line by line. However, 
+depending on your specific requirements, you might find it necessary to read the 
+file in byte chunks rather than line by line. Additionally, employing `tokenization`
+can offer further flexibility and customization for various use cases.
+
 &nbsp;
 
 <p class="ending">
