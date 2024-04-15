@@ -9,8 +9,7 @@
 		<p>Hi, I'm a software engineer & digital nomad from Serbia.</p>
 		<p>Former (maybe future) electronics engineer.</p>
 		<p class="top-margin">
-			I've primarily been focusing on JS/TS, but lately I've started spending some good hours with
-			Rust & I plan to socialize with it more.
+			I've primarily been focusing on JS/TS, but I'm also interested in many other tech and non-tech areas. My goal is to share some of my insights here.
 		</p>
 		<p class="top-margin">
 			Currently, building at <a href="https://www.edgedb.com/" target="_blank">EdgeDB</a>.
