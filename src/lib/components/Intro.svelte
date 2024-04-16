@@ -64,7 +64,7 @@
 		.social-icons {
 			display: flex;
 			justify-content: center;
-			gap: 8px;
+			gap: 10px;
 			margin-top: 12px;
 
 			.icon {
