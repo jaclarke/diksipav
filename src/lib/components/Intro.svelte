@@ -71,7 +71,7 @@
 				color: var(--font-color);
 				border-bottom: none;
 				&:hover {
-					color: var(--link-color);
+					color: #4f8da3;
 				}
 			}
 		}

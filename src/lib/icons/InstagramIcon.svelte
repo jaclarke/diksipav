@@ -1,12 +1,37 @@
 <svg
-	fill="none"
-	width="32px"
-	height="32px"
-	viewBox="0 0 19.2 19.2"
-	data-name="Instagram w/circle"
 	xmlns="http://www.w3.org/2000/svg"
-	><path
-		fill="currentColor"
-		d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z"
-	/></svg
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="1.1"
+	width="32"
+	height="32"
+	viewBox="0 0 256 256"
+	xml:space="preserve"
 >
+	<defs> </defs>
+	<g
+		style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+		transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+	>
+		<path
+			d="M 60.961 31.655 c 0 -1.437 -1.165 -2.602 -2.602 -2.602 c -1.437 0 -2.602 1.165 -2.602 2.602 c 0 1.437 1.165 2.602 2.602 2.602 C 59.797 34.256 60.961 33.092 60.961 31.655 z"
+			style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+			fill="currentColor"
+			transform=" matrix(1 0 0 1 0 0) "
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 45 33.079 c -6.584 0 -11.921 5.337 -11.921 11.921 c 0 1.646 0.334 3.214 0.937 4.64 c 0.603 1.426 1.476 2.711 2.555 3.789 c 2.157 2.157 5.138 3.492 8.43 3.492 c 3.292 0 6.272 -1.334 8.43 -3.492 c 1.079 -1.079 1.952 -2.363 2.555 -3.789 c 0.603 -1.426 0.937 -2.994 0.937 -4.64 C 56.921 38.416 51.584 33.079 45 33.079 z"
+			style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+			fill="currentColor"
+			transform=" matrix(1 0 0 1 0 0) "
+			stroke-linecap="round"
+		/>
+		<path
+			d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 c 24.853 0 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 70 55.238 C 70 63.391 63.391 70 55.238 70 H 34.762 C 26.609 70 20 63.391 20 55.238 V 34.762 c 0 -3.057 0.929 -5.897 2.521 -8.253 C 25.174 22.582 29.666 20 34.762 20 h 20.477 c 5.095 0 9.588 2.582 12.241 6.508 C 69.071 28.864 70 31.704 70 34.762 V 55.238 z"
+			style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+			fill="currentColor"
+			transform=" matrix(1 0 0 1 0 0) "
+			stroke-linecap="round"
+		/>
+	</g>
+</svg>
