@@ -1,6 +1,10 @@
 <script>
 	import img from '$lib/images/portfolio.jpg';
 	import Mountain from './Mountain.svelte';
+	import GithubIcon from '../icons/GithubIcon.svelte';
+	import LinkedinIcon from '../icons/LinkedinIcon.svelte';
+	import XIcon from '../icons/XIcon.svelte';
+	import InstagramIcon from '../icons/InstagramIcon.svelte';
 </script>
 
 <div class="intro">
@@ -17,6 +21,16 @@
 		</p>
 		<p class="top-margin">I enjoy immersing myself in nature & doing outdoorsy stuff.</p>
 		<p>I LOVE to read. & sometimes I draw.</p>
+		<div class="social-icons">
+			<a href="https://github.com/diksipav" target="_blank" class="icon"><GithubIcon /></a>
+			<a href="https://www.linkedin.com/in/diksipav/" target="_blank" class="icon"
+				><LinkedinIcon /></a
+			>
+			<a href="https://twitter.com/diksipav" target="_blank" class="icon"><XIcon /></a>
+			<a href="https://www.instagram.com/dijana.pavlovic_/" target="_blank" class="icon"
+				><InstagramIcon /></a
+			>
+		</div>
 		<Mountain class="mountain-wrapper" />
 	</div>
 </div>
@@ -45,6 +59,21 @@
 
 			.top-margin {
 				margin-top: 16px;
+			}
+		}
+
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+			margin-top: 12px;
+
+			.icon {
+				color: var(--font-color);
+				border-bottom: none;
+				&:hover {
+					color: var(--link-color);
+				}
 			}
 		}
 	}

@@ -40,6 +40,12 @@ body {
 	}
 
 	* {
+		box-sizing: border-box;
+	}
+
+	p,
+	a,
+	ul li {
 		color: var(--font-color);
 		font-family:
 			THICCCBOI-Regular,
@@ -77,6 +83,7 @@ body {
 	h2,
 	h3,
 	h4 {
+		color: var(--font-color);
 		font-family:
 			THICCCBOI-Bold,
 			ui-sans-serif,
@@ -113,6 +120,7 @@ body {
 
 	a {
 		color: var(--link-color);
+		transition: color 0.2s;
 		text-decoration: none;
 		padding: 0 2px;
 
