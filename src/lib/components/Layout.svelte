@@ -8,7 +8,7 @@
 
 		@include breakpoint(md) {
 			display: grid;
-			@include responsive(grid-template-columns, auto 532px auto, $xxl: auto 600px auto);
+			@include responsive(grid-template-columns, 1fr 532px 1fr, $xxl: 1fr 600px 1fr);
 			grid-template-areas: 'left main right';
 		}
 	}
