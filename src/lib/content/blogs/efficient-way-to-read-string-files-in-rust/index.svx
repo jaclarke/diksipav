@@ -3,7 +3,7 @@ id: aa37b1f0-0017-11ea-9149-d386e8a6bf6f
 title: Efficient way to read string files in Rust
 date: 2024-03-25
 desc: Today, we will explore a few different methods for reading files in Rust. As a frontend engineer with a huge curiosity for backend and low-level systems, experimenting with Rust has been quite an enjoyable journey.
-tags: '#rust'
+tags: '#rust #programming'
 ---
 
 # {title}
@@ -358,9 +358,11 @@ can offer further flexibility and customization for various use cases.
 
 &nbsp;
 
-<p class="ending">
+<div class="ending">
+  <p>
     Until next time, take care! 🦀
-</p>
+  </p>
+</div>
 
 
 

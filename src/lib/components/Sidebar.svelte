@@ -28,7 +28,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		width: 180px;
+		width: 178px;
 		margin: auto;
 
 		a {
