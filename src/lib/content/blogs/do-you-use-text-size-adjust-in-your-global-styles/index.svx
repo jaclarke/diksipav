@@ -3,7 +3,7 @@ id: ba37b1f0-0017-11ea-9149-d386e8a6bf6f
 title: Do you use text-size-adjust in your global styles?
 date: 2024-03-02
 desc: Recently, I stumbled upon an enigmatic CSS issue that manifested only on real mobile devices, particularly iOS Safari. Certain fonts appeared disproportionately large, disrupting the layout integrity.
-tags: '#css #browser'
+tags: '#css #browser #programming'
 ---
 
 # {title}
