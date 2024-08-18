@@ -14,10 +14,10 @@ tags: '#lifestyle'
 
 <div class="heroImg">
 
-![Aruba sunrise: Arikok natural pools](./sunrise.jpg)
+![Aruba sunrise: Alto Vista Chapel](./sunrise.jpg)
 
 <small>
-Aruba sunrise: Arikok natural pools
+Aruba sunrise: Alto Vista Chapel
 </small>
 </div>
 
