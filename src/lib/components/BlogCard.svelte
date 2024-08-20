@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getFilenameFromTitle, type FrontMatter } from '$lib/utils';
+	import { getFilenameFromTitle, type FrontMatter, isNotItPost } from '$lib/utils';
 	import { format } from 'date-fns';
 
 	export let frontmatter: FrontMatter;
@@ -9,7 +9,7 @@
 	<h4>{frontmatter.title}</h4>
 	<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
 	<p class="desc">{@html frontmatter.desc}</p>
-	<small>{frontmatter.tags}</small>
+	<small class={isNotItPost(frontmatter.tags) ? 'notIt' : ''}>{frontmatter.tags}</small>
 </a>
 
 <style lang="scss">
@@ -35,6 +35,10 @@
 			-webkit-line-clamp: 2;
 			line-clamp: 2;
 			-webkit-box-orient: vertical;
+		}
+
+		.notIt {
+			color: #b08aa3;
 		}
 	}
 </style>
