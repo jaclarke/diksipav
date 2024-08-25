@@ -25,7 +25,7 @@
 		@include responsive(
 			grid-template-columns,
 			1fr 500px minmax(100px, 1fr) 480px 1fr,
-			$xl: 1fr 512px minmax(180px, 1fr) 500px 1fr
+			$xl: 1fr 512px minmax(180px, 1fr) 512px 1fr
 		);
 		grid-template-areas: 'left intro middle latest right';
 	}

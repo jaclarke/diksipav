@@ -278,7 +278,7 @@ body {
 		margin-top: 16px;
 	}
 
-	@include breakpoint(xxxl) {
+	@include breakpoint(xl) {
 		p {
 			font-size: 18px;
 		}

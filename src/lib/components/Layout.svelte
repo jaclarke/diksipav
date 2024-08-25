@@ -12,7 +12,7 @@
 			grid-template-areas: 'left main right';
 		}
 
-		@include breakpoint(xxl) {
+		@include breakpoint(xl) {
 			grid-template-columns: 1fr 600px 1fr;
 		}
 	}
