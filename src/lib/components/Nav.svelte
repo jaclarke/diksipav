@@ -7,25 +7,29 @@
 	div {
 		display: flex;
 		align-items: center;
-		gap: 28px;
+		gap: 24px;
 		z-index: 1;
-
-		@include breakpoint(xl) {
-			margin-right: 60px;
-		}
+		position: relative;
+		top: 14px;
+		margin-right: 6px;
 
 		a {
-			--link-color: #acaaa6;
-
 			font-size: 17px;
 			line-height: 20px;
 			opacity: 0.9;
 			font-weight: 300;
 			padding: 0px 2px;
+			color: var(--link-gray);
 
 			&:hover {
 				cursor: pointer;
+				border-bottom: 1px solid var(--link-gray);
 			}
+		}
+
+		@include breakpoint(sm) {
+			top: 0;
+			margin-right: 48px;
 		}
 	}
 </style>

@@ -31,7 +31,7 @@
 		left: 160px;
 		border-left: 110px solid transparent;
 		border-right: 110px solid transparent;
-		border-bottom: 130px solid #151515;
+		border-bottom: 130px solid var(--mountain-bottom);
 		z-index: 1;
 		box-shadow: 0px 32px 24px -20px rgba(0, 0, 0, 0.12);
 	}
@@ -50,7 +50,7 @@
 		right: -43px;
 		border-left: 43px solid transparent;
 		border-right: 43px solid transparent;
-		border-bottom: 51px solid #313131;
+		border-bottom: 51px solid var(--mountain-top);
 		z-index: 2;
 	}
 	.mountain-cap-1,
@@ -60,7 +60,7 @@
 		top: 51px;
 		border-left: 17px solid transparent;
 		border-right: 17px solid transparent;
-		border-top: 10px solid #313131;
+		border-top: 10px solid var(--mountain-top);
 	}
 	.mountain-cap-1 {
 		left: -43px;

@@ -43,11 +43,11 @@
 		grid-area: intro;
 
 		.img {
-			width: 200px;
-			height: 200px;
+			@include responsive(width, 180px, $xxl: 200px);
+			@include responsive(height, 180px, $xxl: 200px);
 			border-radius: 50%;
 			background: pink;
-			margin: 48px 24px 24px;
+			margin: 48px 24px 30px 24px;
 			box-shadow:
 				0 4px 8px 0 rgba(0, 0, 0, 0.2),
 				0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -76,11 +76,11 @@
 	}
 
 	.text :global(.mountain-wrapper) {
-		@include responsive(display, none, $md: block);
-		@include responsive(transform, none, $md: scale(0.84), $xl: none);
+		@include responsive(display, none, $sm: block);
+		@include responsive(transform, none, $sm: scale(0.84), $lg: none);
 		position: absolute;
-		@include responsive(bottom, -36px, $xl: -48px);
-		@include responsive(right, 256px, $xl: 170px);
+		@include responsive(bottom, -36px, $lg: -48px, $xl: -68px);
+		@include responsive(right, 256px, $lg: 170px, $xl: 204px);
 		opacity: 0.3;
 		z-index: -1;
 	}

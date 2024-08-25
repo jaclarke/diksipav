@@ -15,16 +15,14 @@
 <style lang="scss">
 	.card {
 		display: block;
-		border: 1px solid hsla(0, 0%, 100%, 0.15);
-		@include responsive(padding, 2px 16px 12px 16px, $md: 10px 24px 20px 24px);
+		border: 1px solid var(--card-border-color);
+		@include responsive(padding, 2px 16px 12px 16px, $sm: 10px 24px 20px 24px);
 		margin-bottom: 16px;
-		/* box-shadow: 0px 32px 40px -24px rgba(0, 0, 0, 0.25); */
-		/* @include responsive(max-width, 540px, $lg: unset); */
 		border-radius: 8px;
 		transition: border-color 0.4s;
 
 		&:hover {
-			border-color: #7e7e7e;
+			border-color: var(--card-border-hover-color);
 		}
 
 		.desc {
@@ -38,7 +36,7 @@
 		}
 
 		.notIt {
-			color: #b08aa3;
+			color: var(--pink);
 		}
 	}
 </style>

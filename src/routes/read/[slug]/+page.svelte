@@ -15,5 +15,6 @@
 <style lang="scss">
 	.wrapper {
 		grid-area: main;
+		margin-top: 24px;
 	}
 </style>

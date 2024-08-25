@@ -1,11 +1,38 @@
-@import '$lib/styles/vsc-dark-plus.css';
+@import '$lib/styles/vsc-theme.scss';
 
-body {
+:root {
+	--bg-color: #f3f3f2;
+	--font-color: #4d4d4d;
+	--heading-color: #333333;
+	--link-color: #3b82b1;
+	--link-gray: #333333;
+	--mountain-bottom: #3a805b;
+	--mountain-top: #adaca9;
+	--card-border-color: #d1d1d1;
+	--card-border-hover-color: #6e6e6e;
+	--code-bg: #f4ebd4;
+	--muted: #817f7a;
+	--pink: #d28db8;
+	--note: #39adb5;
+}
+
+[data-theme='dark'] {
 	--bg-color: #212121;
 	--font-color: #b7b7b7;
 	--heading-color: #d6d6d6;
 	--link-color: #5797ae;
+	--link-gray: #acaaa6;
+	--mountain-bottom: #151515;
+	--mountain-top: #313131;
+	--card-border-color: hsla(0, 0%, 100%, 0.15);
+	--card-border-hover-color: #7e7e7e;
+	--code-bg: #2e2a29;
+	--muted: #9a9995;
+	--pink: #b08aa3;
+	--note: #cca255;
+}
 
+body {
 	background-color: var(--bg-color);
 	box-sizing: border-box;
 	min-height: 100vh;
@@ -70,7 +97,7 @@ body {
 	}
 
 	p {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1.7;
 		margin: 0 0 4px 0;
 	}
@@ -92,25 +119,25 @@ body {
 	}
 
 	h1 {
-		font-size: 28px;
+		font-size: 26px;
 		padding: 6px 0px 24px 0px;
 		color: var(--heading-color);
-		max-width: 480px;
+		max-width: 384px;
 	}
 
 	h2 {
-		font-size: 22px;
-		padding: 32px 0px 16px 0px;
+		font-size: 20px;
+		padding: 30px 0px 16px 0px;
 		margin-top: 24px;
 	}
 
 	h3 {
-		font-size: 18px;
-		padding: 32px 0px 8px 0px;
+		font-size: 16px;
+		padding: 30px 0px 8px 0px;
 	}
 
 	h4 {
-		font-size: 18px;
+		font-size: 16px;
 		padding: 8px 0px;
 	}
 
@@ -126,21 +153,14 @@ body {
 	}
 
 	small {
-		font-size: 13px;
-		color: #9a9995;
-	}
-
-	pre {
-		font-size: 16px;
-		line-height: 1.6;
-
-		margin-top: 0;
+		font-size: 12px;
+		color: var(--muted);
 	}
 
 	code {
 		padding: 1px 3px 2px 3px;
 		font-size: 98%;
-		background: #3b3635;
+		background: var(--code-bg);
 		border-radius: 2px;
 		color: #c47a5b;
 		font-family: THICCCBOI-Medium;
@@ -148,16 +168,32 @@ body {
 
 	pre[class*='language-'] {
 		position: static;
-		background: #2e2a29;
-		padding: 14px 24px;
-		margin: 16px -24px 28px -24px;
-		@include responsive(border-radius, 0, $md: 4px);
-		@include responsive(width, min(calc(100vw - 1px), 556px), $md: unset);
+		@include responsive(border-radius, 0, $sm: 4px);
+		@include responsive(width, min(calc(100vw - 1px), 556px), $sm: unset);
 
 		code[class*='language-'] {
 			padding: 0;
-			@include responsive(font-size, 15px, $md: 16px);
-			background: #2e2a29;
+			@include responsive(font-size, 15px, $sm: 16px);
+		}
+	}
+
+	.light-theme pre[class*='language-'] {
+		margin: 16px -24px 28px -24px;
+		background: var(--code-bg);
+		border: none;
+
+		code[class*='language-'] {
+			background: var(--code-bg);
+		}
+	}
+
+	.dark-theme pre[class*='language-'] {
+		margin: 16px -24px 28px -24px;
+		background: var(--code-bg);
+		border: none;
+
+		code[class*='language-'] {
+			background: var(--code-bg);
 		}
 	}
 
@@ -166,7 +202,7 @@ body {
 		margin-bottom: 28px;
 
 		li {
-			font-size: 18px;
+			font-size: 16px;
 			line-height: 1.5;
 		}
 
@@ -180,22 +216,21 @@ body {
 	}
 
 	.note {
-		border: 1px solid #cca255;
+		border: 1px solid var(--note);
 		margin: 24px -24px 32px -24px;
 		padding: 21px 24px 14px 24px;
 		background: var(--bg-color);
-		@include responsive(border-radius, 0, $md: 4px);
-
-		p {
-			@include responsive(font-size, 16px, $md: 17px);
-		}
+		@include responsive(border-radius, 0, $sm: 4px);
+		box-shadow: 0px 24px 26px -26px rgba(0, 0, 0, 0.1);
+		font-style: italic;
 
 		p:first-of-type::before {
 			content: 'NOTE:';
+			font-style: normal;
 			top: 20px;
 			left: 24px;
 			padding-right: 4px;
-			color: #cca255;
+			color: var(--note);
 			font-family: THICCCBOI-Medium;
 		}
 	}
@@ -205,7 +240,7 @@ body {
 		column-gap: 56px;
 		justify-content: center;
 		margin: 0 -24px 28px -24px;
-		@include responsive(flex-direction, column, $md: row);
+		@include responsive(flex-direction, column, $sm: row);
 		align-items: center;
 
 		p {
@@ -231,7 +266,6 @@ body {
 		width: 100%;
 
 		img {
-			// height: 100%;
 			width: 100%;
 			margin: 0;
 			border-radius: 4px;
@@ -242,5 +276,41 @@ body {
 		border-top: 1px solid #676663;
 		padding-top: 8px;
 		margin-top: 16px;
+	}
+
+	@include breakpoint(xxxl) {
+		p {
+			font-size: 18px;
+		}
+
+		h1 {
+			font-size: 28px;
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+
+		h3 {
+			font-size: 18px;
+		}
+
+		h4 {
+			font-size: 18px;
+		}
+
+		small {
+			font-size: 13px;
+		}
+
+		pre {
+			font-size: 16px;
+		}
+
+		ul {
+			li {
+				font-size: 18px;
+			}
+		}
 	}
 }

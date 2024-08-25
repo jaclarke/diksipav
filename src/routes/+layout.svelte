@@ -1,18 +1,42 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-
+	import DarkThemeIcon from '$lib/icons/DarkThemeIcon.svelte';
+	import LightThemeIcon from '$lib/icons/LightThemeIcon.svelte';
 	import '../app.scss';
+
+	let theme = 'dark';
+
+	onMount(() => {
+		// Access localStorage and document only in the browser
+		theme = localStorage.getItem('theme') || 'light';
+		document.documentElement.setAttribute('data-theme', theme);
+	});
+
+	function toggleTheme() {
+		theme = theme === 'light' ? 'dark' : 'light';
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+	}
 </script>
 
 <div class="header-wrapper">
 	<div class="header">
 		<a href="/" class="logo">dijana pavlović</a>
 		<Nav />
+		<button on:click={toggleTheme} class="themeBtn">
+			{#if theme === 'light'}
+				<DarkThemeIcon />
+			{:else}
+				<LightThemeIcon />
+			{/if}
+		</button>
 	</div>
 </div>
 <div class="main-wrapper">
-	<main>
+	<main class={`${theme}-theme`}>
 		<slot />
 	</main>
 </div>
@@ -22,20 +46,21 @@
 	.header-wrapper {
 		position: sticky;
 		top: 0px;
-		@include responsive(background-color, rgba(33, 33, 33, 0.8), $xl: unset);
-		@include responsive(padding, 12px 12px 0 12px, $md: 20px 20px 0 20px);
-		z-index: 1;
+		@include responsive(background-color, var(--bg-color), $lg: unset);
+		@include responsive(opacity, 0.8, $lg: unset);
+		@include responsive(padding, 12px 12px 0 12px, $sm: 20px 20px 0 20px);
+		z-index: 2;
 
 		&::before {
 			position: absolute;
 			content: '';
 			width: 100%;
 			height: 12px;
-			@include responsive(height, 12px, $md: 20px);
-			@include responsive(width, 100%, $xl: 100px);
+			@include responsive(height, 12px, $sm: 20px);
+			@include responsive(width, 100%, $lg: 100px);
 			left: 0;
 			top: 0;
-			background-color: #1f1f1f;
+			background-color: var(--bg-color);
 		}
 
 		.header {
@@ -44,9 +69,9 @@
 			align-items: center;
 			height: 80px;
 			position: relative;
-			@include responsive(padding, 0 10px 0 12px, $md: 0 20px);
+			@include responsive(padding, 0 10px 0 12px, $sm: 0 20px);
 
-			$border: 1px solid #acaaa6;
+			$border: 1px solid var(--link-gray);
 			border-left: $border;
 
 			&::before,
@@ -56,7 +81,7 @@
 			}
 
 			&::before {
-				@include responsive(width, 142px, $md: 278px, $xl: 300px, $xxl: 340px);
+				@include responsive(width, 142px, $sm: 278px, $lg: 300px, $xl: 340px);
 				height: 1px;
 				left: 0;
 				top: -1px;
@@ -64,8 +89,8 @@
 			}
 
 			&::after {
-				@include responsive(height, 80px, $xl: 150px);
-				@include responsive(width, calc(100vw - 168px), $md: calc(100vw - 320px), $xl: 100px);
+				@include responsive(height, 80px, $lg: 150px);
+				@include responsive(width, calc(100vw - 168px), $sm: calc(100vw - 320px), $lg: 100px);
 				right: 0;
 				top: -1px;
 				border-right: $border;
@@ -73,38 +98,50 @@
 			}
 
 			.logo {
-				color: #acaaa6;
+				color: var(--link-gray);
 				border: none;
 				font-family: THICCCBOI-ExtraBold, Arial, sans-serif;
-				font-size: 30px;
-				line-height: 34px;
+				font-size: 26px;
+				line-height: 28px;
 				font-weight: 700;
 				margin: 0px;
-				padding: 6px 0px 8px 0px;
-				@include responsive(width, 124px, $md: fit-content);
+				padding: 2px 0px 8px 0px;
+				@include responsive(width, 124px, $sm: fit-content);
 
-				@include breakpoint(md) {
+				@include breakpoint(sm) {
 					padding: 16px 0 20px 0;
-					font-size: 32px;
+					font-size: 30px;
 					line-height: 40px;
 				}
+			}
+
+			.themeBtn {
+				background: transparent;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				position: absolute;
+				z-index: 1;
+				top: 11px;
+				right: 11px;
 			}
 		}
 	}
 
 	.main-wrapper {
-		min-height: calc(100vh - 130.5px);
-		@include responsive(padding, 0 12px, $md: 0 20px);
+		min-height: calc(100vh - 135px);
+		@include responsive(padding, 0 12px, $sm: 0 20px);
 		display: flex;
+		flex-direction: column;
 
 		main {
-			$border: 1px solid #acaaa6;
-			border-left: $border;
 			flex-grow: 1;
-			padding-top: 40px;
-			padding-bottom: 80px;
-			@include responsive(display, flex, $xl: block);
+			border-left: 1px solid var(--link-gray);
+			display: flex;
 			justify-content: center;
+			align-items: center;
+			@include responsive(padding-top, 40px, $lg: 0);
+			@include responsive(padding-bottom, 80px, $lg: 46px);
 		}
 	}
 </style>

@@ -14,7 +14,7 @@
 	.sidebar {
 		display: none;
 
-		@include breakpoint(lg) {
+		@include breakpoint(md) {
 			display: block;
 
 			width: calc(50% - 300px);
@@ -28,13 +28,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		width: 178px;
+		width: 144px;
 		margin: auto;
 
 		a {
-			font-size: 15px;
+			@include responsive(font-size, 14px, $xxl: 15px);
 			line-height: 20px;
-			color: #acaaa6;
+			color: var(--link-gray);
 		}
 
 		a:hover {

@@ -19,10 +19,14 @@
 <style lang="scss">
 	.container {
 		height: 100%;
-		@include responsive(padding, 0 12px, $md: 0);
-		@include responsive(display, block, $xl: grid);
-		@include responsive(max-width, 600px, $xl: unset);
-		grid-template-columns: 1fr 514px 1fr 514px 1fr;
+		@include responsive(padding, 0 12px, $sm: 0);
+		@include responsive(display, block, $lg: grid);
+		@include responsive(max-width, 600px, $lg: unset);
+		@include responsive(
+			grid-template-columns,
+			1fr 500px minmax(100px, 1fr) 480px 1fr,
+			$xl: 1fr 512px minmax(180px, 1fr) 500px 1fr
+		);
 		grid-template-areas: 'left intro middle latest right';
 	}
 	.latest {
@@ -35,7 +39,7 @@
 		.title {
 			align-self: start;
 			padding: 0 0 8px 20px;
-			@include responsive(display, none, $xl: block);
+			@include responsive(display, none, $lg: block);
 			font-size: 14px;
 		}
 	}
@@ -44,7 +48,7 @@
 		text-align: center;
 		margin-top: 32px;
 
-		@include breakpoint(xl) {
+		@include breakpoint(sm) {
 			display: none;
 		}
 	}

@@ -6,7 +6,7 @@
 	.wrapper {
 		display: flex;
 		justify-content: center;
-		@include responsive(padding-top, 100px, $md: 8vh);
+		@include responsive(padding-bottom, 200px, $sm: 18vh);
 	}
 	p {
 		text-align: center;
