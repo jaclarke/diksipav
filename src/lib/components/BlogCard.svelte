@@ -7,7 +7,7 @@
 </script>
 
 <a class={`card ${recent ? 'recent' : ''}`} href={getFilenameFromTitle(frontmatter.title, 'read')}>
-	<h4>{frontmatter.title}</h4>
+	<h5>{frontmatter.title}</h5>
 	{#if recent}
 		<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
 	{/if}
