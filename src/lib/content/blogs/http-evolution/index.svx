@@ -59,18 +59,6 @@ before data transmission begins. We will see in the next blog post how HTTP/3,
 built on the `QUIC` protocol, eliminates the 3-way handshake entirely by using 
 a connection establishment process that requires only a single round-trip.
 
-<div class="important">
-<p>
-HTTP/1 (all versions) and HTTP/2 use `TCP` protocol for data transfer.
-</p>
-</div>
-
-<div class="important">
-<p>
-TCP requires three-way handshake before data transfer can begin.
-</p>
-</div>
-
 ## HTTP 1.0 
 
 `HTTP/1` was introduced in 1996. Before that, there was `HTTP/0.9` - a simple protocol 
@@ -118,7 +106,7 @@ default after some time due to issues with compatibility and performance.
 
 <div class="heroImg">
 
-![HTTP/1.1 Pipelining](./pipelining1.png)
+![HTTP/1.1 Pipelining](./pipelining.png)
 
 </div>
 
