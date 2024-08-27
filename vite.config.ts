@@ -8,8 +8,6 @@ export default defineConfig({
 			scss: {
 				additionalData: `
 				  @import '$lib/styles/_mixins.scss';
-					@import '$lib/styles/vsc-theme.scss';
-
         `
 			}
 		}

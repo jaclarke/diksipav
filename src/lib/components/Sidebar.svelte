@@ -32,7 +32,7 @@
 		margin: auto;
 
 		a {
-			@include responsive(font-size, 14px, $xxl: 15px);
+			@include responsive(font-size, 15px, $xxl: 16px);
 			line-height: 20px;
 			color: var(--link-gray);
 		}

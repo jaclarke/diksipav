@@ -110,7 +110,7 @@
 
 				@include breakpoint(sm) {
 					padding: 16px 0 20px 0;
-					font-size: 30px;
+					font-size: 32px;
 					line-height: 40px;
 				}
 			}

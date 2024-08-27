@@ -8,12 +8,12 @@
 
 		@include breakpoint(sm) {
 			display: grid;
-			grid-template-columns: 1fr 550px 1fr;
+			grid-template-columns: 1fr 600px 1fr;
 			grid-template-areas: 'left main right';
 		}
 
 		@include breakpoint(xl) {
-			grid-template-columns: 1fr 600px 1fr;
+			grid-template-columns: 1fr 650px 1fr;
 		}
 	}
 </style>

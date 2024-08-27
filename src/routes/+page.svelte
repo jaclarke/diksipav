@@ -11,7 +11,7 @@
 	<div class="latest">
 		<p class="title">Latest:</p>
 		{#each data.blogs.slice(0, 3) as frontmatter (frontmatter.id)}
-			<BlogCard {frontmatter} />
+			<BlogCard {frontmatter} recent={true} />
 		{/each}
 	</div>
 </div>

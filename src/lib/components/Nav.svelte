@@ -14,8 +14,8 @@
 		margin-right: 6px;
 
 		a {
-			font-size: 17px;
-			line-height: 20px;
+			font-size: 18px;
+			line-height: 22px;
 			opacity: 0.9;
 			font-weight: 300;
 			padding: 0px 2px;

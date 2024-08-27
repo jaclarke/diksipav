@@ -3,11 +3,14 @@
 	import { format } from 'date-fns';
 
 	export let frontmatter: FrontMatter;
+	export let recent: boolean;
 </script>
 
-<a class="card" href={getFilenameFromTitle(frontmatter.title, 'read')}>
+<a class={`card ${recent ? 'recent' : ''}`} href={getFilenameFromTitle(frontmatter.title, 'read')}>
 	<h4>{frontmatter.title}</h4>
-	<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
+	{#if recent}
+		<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
+	{/if}
 	<p class="desc">{@html frontmatter.desc}</p>
 	<small class={isNotItPost(frontmatter.tags) ? 'notIt' : ''}>{frontmatter.tags}</small>
 </a>
@@ -15,7 +18,7 @@
 <style lang="scss">
 	.card {
 		display: block;
-		border: 1px solid var(--card-border-color);
+		border: 1px solid transparent;
 		@include responsive(padding, 2px 16px 12px 16px, $sm: 10px 24px 20px 24px);
 		margin-bottom: 16px;
 		border-radius: 8px;
@@ -38,5 +41,9 @@
 		.notIt {
 			color: var(--pink);
 		}
+	}
+
+	.recent {
+		border: 1px solid var(--card-border-color);
 	}
 </style>
