@@ -51,7 +51,7 @@ and application. All these layers work together to transmit data over the networ
 `TCP` operates at the Transport layer (Layer 4) of the OSI model and is responsible 
 for providing reliable, ordered, and error-checked delivery of data between 
 applications running on different devices within a network. HTTP will create and 
-send a request but the actuall data transfer is happening on transport level.
+send a request but the actual data transfer is happening on transport level.
 TCP is very reliable and has other positive features (which is why it is used 
 for all this time), but its minus is that every TCP connection requires a `three-way handshake` - 
 a process used to establish a reliable connection between a client and a server 
