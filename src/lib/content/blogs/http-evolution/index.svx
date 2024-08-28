@@ -260,8 +260,6 @@ requests needed to load a webpage. Server can anticipate which resources the cli
 will need  based on the initial request and sends them in advance. For example 
 when client asks for HTML page server can also send CSS and JS files, and images for that page.
 
-&nbsp;
-
 ### Challenges with HTTP/2
 
 Most challenges and limitations of HTTP/2 are connected with the TCP layer:
@@ -277,8 +275,9 @@ characteristics compared to the traditional wired networks for which TCP was
 originally designed. HTTP/2's reliance on TCP makes it harder to optimize for 
 these newer environments, where latency and packet loss are more common.
 
+&nbsp;
 
-## Resources used
+**References and resources**
 
   - <a href="https://blog.bytebytego.com/p/http1-vs-http2-vs-http3-a-deep-dive">ByteByteGo HTTP deep dive</a>
   - <a href="https://www.linkedin.com/pulse/http-10-vs-11-20-30-swadhin-pattnaik/">Swadhin Pattnaik: HTTP evolution</a>
