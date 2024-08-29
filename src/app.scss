@@ -271,6 +271,7 @@ body {
 		}
 	}
 
+	.img,
 	.heroImg {
 		width: 100%;
 
@@ -285,6 +286,17 @@ body {
 
 			small {
 				padding-left: 24px;
+			}
+		}
+	}
+
+	.heroImg {
+		p {
+			margin-top: 0;
+			margin-bottom: 16px;
+
+			img {
+				@include responsive(border-radius, 0, $sm: 6px);
 			}
 		}
 	}

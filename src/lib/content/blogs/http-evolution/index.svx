@@ -87,7 +87,7 @@ In HTTP/1.1 the TCP connection can be reused to execute several HTTP requests.
 This improved performance because decreases number of 3-way-handshakes. But, the 
 limit of 6 concurrent connections was still there. 
 
-<div class="heroImg">
+<div class="img">
 
 ![HTTP/1 Multiple TCP Connections vs HTTP/1.1 Persistent TCP Connection](./multiple_vs_persistent.png)
 
@@ -104,7 +104,7 @@ Besides this, pipelining required special server and proxy support which was tri
 Because all of this some browsers never implemented it and other disabled it by 
 default after some time due to issues with compatibility and performance. 
 
-<div class="heroImg">
+<div class="img">
 
 ![HTTP/1.1 Pipelining](./pipelining.png)
 
@@ -282,7 +282,7 @@ these newer environments, where latency and packet loss are more common.
   - <a href="https://blog.bytebytego.com/p/http1-vs-http2-vs-http3-a-deep-dive">ByteByteGo HTTP deep dive</a>
   - <a href="https://www.linkedin.com/pulse/http-10-vs-11-20-30-swadhin-pattnaik/">Swadhin Pattnaik: HTTP evolution</a>
   - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">MDN: Evolution of HTTP</a>
-  - <p class="pink"> Endless conversations with GPT. 💪🏽💪🏽</p>
+  - <p class="pink"> WWW. Endless conversations with GPT. 💪🏽💪🏽</p>
 
 
 <div class="ending">
