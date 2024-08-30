@@ -11,7 +11,6 @@
 		z-index: 1;
 		position: relative;
 		top: 14px;
-		margin-right: 6px;
 
 		a {
 			font-size: 18px;

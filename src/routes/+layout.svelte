@@ -72,7 +72,7 @@
 			@include responsive(padding, 0 10px 0 12px, $sm: 0 20px);
 
 			$border: 1px solid var(--link-gray);
-			border-left: $border;
+			@include responsive(border-left, none, $sm: $border);
 
 			&::before,
 			&::after {
@@ -85,7 +85,7 @@
 				height: 1px;
 				left: 0;
 				top: -1px;
-				border-top: $border;
+				@include responsive(border-top, none, $sm: $border);
 			}
 
 			&::after {
@@ -93,8 +93,8 @@
 				@include responsive(width, calc(100vw - 168px), $sm: calc(100vw - 320px), $lg: 100px);
 				right: 0;
 				top: -1px;
-				border-right: $border;
-				border-top: $border;
+				@include responsive(border-top, none, $sm: $border);
+				@include responsive(border-right, none, $sm: $border);
 			}
 
 			.logo {
@@ -122,8 +122,8 @@
 				cursor: pointer;
 				position: absolute;
 				z-index: 1;
-				top: 11px;
-				right: 11px;
+				@include responsive(top, 2px, $sm: 13px);
+				@include responsive(right, -2px, $sm: 11px);
 			}
 		}
 	}
@@ -136,12 +136,12 @@
 
 		main {
 			flex-grow: 1;
-			border-left: 1px solid var(--link-gray);
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			@include responsive(padding-top, 40px, $lg: 0);
 			@include responsive(padding-bottom, 80px, $lg: 46px);
+			@include responsive(border-left, none, $sm: 1px solid var(--link-gray));
 		}
 	}
 </style>
