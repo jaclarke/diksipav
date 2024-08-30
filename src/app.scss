@@ -125,7 +125,7 @@ body {
 		font-size: 27px;
 		padding: 6px 0px 24px 0px;
 		color: var(--heading-color);
-		max-width: 442px;
+		max-width: 470px;
 	}
 
 	h2 {
@@ -293,7 +293,7 @@ body {
 	.heroImg {
 		p {
 			margin-top: 0;
-			margin-bottom: 16px;
+			margin-bottom: 28px;
 
 			img {
 				@include responsive(border-radius, 0, $sm: 6px);

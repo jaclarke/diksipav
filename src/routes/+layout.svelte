@@ -139,7 +139,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			@include responsive(padding-top, 40px, $lg: 0);
+			@include responsive(padding-top, 20px, $lg: 0);
 			@include responsive(padding-bottom, 80px, $lg: 46px);
 			@include responsive(border-left, none, $sm: 1px solid var(--link-gray));
 		}
