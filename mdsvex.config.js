@@ -1,4 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+import remarkFrontmatter from 'remark-frontmatter';
 import relativeImages from 'mdsvex-relative-images';
 import { visit } from 'unist-util-visit';
 
@@ -35,7 +36,7 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [relativeImages, remarkHeadingId, remarkHeadingId],
+	remarkPlugins: [relativeImages, remarkHeadingId, remarkFrontmatter],
 	rehypePlugins: []
 });
 

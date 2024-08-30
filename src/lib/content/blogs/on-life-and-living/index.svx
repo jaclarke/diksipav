@@ -3,6 +3,7 @@ id: ba37b1f0-0017-11ea-9149-d386e8a6bfdd
 title: On life and living
 date: 2024-08-18
 desc: Do you feel content when you wake up? At night, do you find calm before sleep? No second-guessing. No overanalyzing.
+seoDesc: My personal philosophy, views, and thoughts on what's important for a fulfilling and happy life.' 
 tags: '#lifestyle'
 ---
 

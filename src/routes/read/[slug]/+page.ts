@@ -4,6 +4,8 @@ export const load = async ({ params }) => {
 
 	return {
 		component: component.default,
-		headings: component.metadata.headings
+		headings: component.metadata.headings,
+		title: component.metadata.title,
+		desc: component.metadata.seoDesc
 	};
 };

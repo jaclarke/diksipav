@@ -5,6 +5,11 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name="description" content={data.desc} />
+</svelte:head>
+
 <Layout>
 	<Sidebar headings={data.headings} />
 	<div class="wrapper">

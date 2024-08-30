@@ -5,6 +5,16 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Software Engineer & Digital Nomad | Insights on Tech & Life</title>
+	<meta
+		name="description"
+		content={`Hi, I'm a software engineer and digital nomad from Serbia. 
+		Explore my insights on software engineering, tech adventures, and personal 
+		interests. Currently building with EdgeDB and sharing my experiences with coding, nature, and more.`}
+	/>
+</svelte:head>
+
 <div class="container">
 	<Intro />
 	<p class="dots">. . .</p>

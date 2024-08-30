@@ -7,6 +7,7 @@ const blogSchema = z.object({
 	title: z.string(),
 	date: z.date(),
 	desc: z.string(),
+	seoDesc: z.string(),
 	tags: z.string()
 });
 
@@ -26,8 +27,6 @@ export async function getAllBlogs() {
 			return matter(str).data as z.infer<typeof blogSchema>;
 		})
 	);
-
-	// todo implement sorting
 
 	return reads.sort((a, b) => b.date - a.date);
 }
