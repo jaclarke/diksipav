@@ -60,10 +60,8 @@ protocol layers and the responsibilities of each one (if you aren't already) bef
 
 `TCP` operates at the `Transport layer` (Layer 4) of the OSI model. It promises 
 guaranteed delivery of messages it gets from the layer above to the destination.
-TCP also breaks long messages into shorter segments and provides a congestion-control mechanism.
-
-
-But, its minus is that every TCP connection requires a `three-way handshake` - 
+TCP also breaks long messages into shorter segments and provides a congestion-control 
+mechanism. But, its minus is that every TCP connection requires a `three-way handshake` - 
 a process used to establish a reliable connection between a client and a server 
 before data transmission begins. We will see in the next blog post how HTTP/3, 
 built on the `QUIC` protocol, eliminates the 3-way handshake entirely by using 
@@ -275,8 +273,8 @@ when client asks for HTML page server can also send CSS and JS files, and images
 Most challenges and limitations of HTTP/2 are connected with the TCP layer:
 - `HOL` blocking is still happening at the TCP level. If a single packet is lost in 
 a TCP connection, all streams using that connection are blocked until the 
-missing packet is retransmitted and received,
-- `three-way handshake` and `slow start algorithm` impacts performance in scenarios when low latency is crucial,
+missing packet is retransmitted and received.
+- `Three-way handshake` and `slow start algorithm` impacts performance in scenarios when low latency is crucial.
 - TCP connections are bound to specific IP addresses, so when a client's IP changes 
 (e.g., switching from Wi-Fi to cellular), it can cause dropped connections and 
 delays due to the need to re-establish the connection.
