@@ -53,14 +53,14 @@ session, presentation, and application. All these layers work together to transm
 data over the network. `Aplication layer` is what end-users interact with daily, 
 and is where the communication begin. `HTTP` belongs to this layer (together 
 with `FTP` - File Transfer Protocol, `SMTP` - Simple Mail Transfer Protocol, 
-`DNS` - Domain Name System, and others). "I suggest you get familiar with network 
+`DNS` - Domain Name System, and others). I suggest you get familiar with network 
 protocol layers and the responsibilities of each one (if you aren't already) before continuing.
 
 #### TCP (Transmission Control Protocol)
 
 `TCP` operates at the `Transport layer` (Layer 4) of the OSI model. It promises 
 guaranteed delivery of messages it gets from the layer above to the destination.
-TCP also breaks long messages into shorter segments and provides a congestion-control 
+TCP also breaks long messages it receives into shorter segments and provides a congestion-control 
 mechanism. But, its minus is that every TCP connection requires a `three-way handshake` - 
 a process used to establish a reliable connection between a client and a server 
 before data transmission begins. We will see in the next blog post how HTTP/3, 
