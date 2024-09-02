@@ -30,7 +30,7 @@ HTTP evolution prior to HTTP/3. 💪🏽
 
 `HTTP (HyperText Transfer Protocol)` is the underlying protocol of the `World Wide Web`. 
 It represents the foundational set of rules and standards that allows communication 
-between web browsers (clients) and web servers. HTTP (among some other things) is 
+between web browsers (clients) and web servers. HTTP (together with lower network protocols) is 
 what makes it possible for you to click on a link or enter a URL in your browser 
 and have the content from a web server displayed on your screen.
 
@@ -45,22 +45,25 @@ accurately.
 
 #### OSI model
 
-The [OSI model](https://www.auvik.com/franklyit/blog/osi-model-explained/) is a conceptual model for understanding how data flows across and 
-within networks between its members. The `seven layers` of the OSI model from 
-bottom to top are physical, data link, network, transport, session, presentation, 
-and application. All these layers work together to transmit data over the network.
-`Aplication layer` is what end-users interact with daily. `HTTP` belongs to this layer 
-(together with `FTP` - File Transfer Protocol, `SMTP` - Simple Mail Transfer Protocol, `DNS` - Domain Name System, and others).
-
+The [OSI model](https://www.auvik.com/franklyit/blog/osi-model-explained/) is a 
+conceptual model for understanding how data flows across and within networks
+between its members (end-system members, switches, routers). The `seven layers` 
+of the OSI model from bottom to top are physical, data link, network, transport, 
+session, presentation, and application. All these layers work together to transmit 
+data over the network. `Aplication layer` is what end-users interact with daily, 
+and is where the communication begin. `HTTP` belongs to this layer (together 
+with `FTP` - File Transfer Protocol, `SMTP` - Simple Mail Transfer Protocol, 
+`DNS` - Domain Name System, and others). "I suggest you get familiar with network 
+protocol layers and the responsibilities of each one (if you aren't already) before continuing.
 
 #### TCP (Transmission Control Protocol)
 
-`TCP` operates at the Transport layer (Layer 4) of the OSI model and is responsible 
-for providing reliable, ordered, and error-checked delivery of data between 
-applications running on different devices within a network. HTTP will create and 
-send a request but the actual data transfer is happening on transport level.
-TCP is very reliable and has other positive features (which is why it is used 
-for all this time), but its minus is that every TCP connection requires a `three-way handshake` - 
+`TCP` operates at the `Transport layer` (Layer 4) of the OSI model. It promises 
+guaranteed delivery of messages it gets from the layer above to the destination.
+TCP also breaks long messages into shorter segments and provides a congestion-control mechanism.
+
+
+But, its minus is that every TCP connection requires a `three-way handshake` - 
 a process used to establish a reliable connection between a client and a server 
 before data transmission begins. We will see in the next blog post how HTTP/3, 
 built on the `QUIC` protocol, eliminates the 3-way handshake entirely by using 
