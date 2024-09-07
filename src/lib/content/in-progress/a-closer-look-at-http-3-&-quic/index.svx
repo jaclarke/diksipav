@@ -1,0 +1,91 @@
+---
+id: 0137b1f0-0017-11ea-9149-d386e8a6bfaa
+title: A closer look at HTTP/3 & QUIC
+date: 2024-09-04
+desc: 
+seoDesc: 
+tags: '#software #network'
+---
+
+# {title}
+
+<div class="heroImg">
+
+![HTTP/3 hero image](./hero.png)
+
+</div>
+
+{desc} Well, I promised a post `on HTTP/3 and when I promise` I deliver. 🍻
+
+HTTP/3 is the latest version of HTTP standardized by IETF (Internet Engineering Task Force )in 2022. Changing 
+HTTP version doesn't require any change in the website code. It evolved from QUIC(Quick UDP Internet Connections) - 
+protocol that Google worked on in order to address HTTP/2 performance limitations. 
+QUIC's potential was seen by IETF 
+
+IETF standardized HTTP/3 in 2022, and some of the tech giants (Youtube, Google, 
+Cloudflare, Instagram) already use it, but it's going to be a long road until its wide adoption.?
+
+Lets remind why the need for HTTP arised at all. Mostly because of TCP's nature: 
+3-way-handhake, packet loss handling, HOL (head-of-line) blocking. All of these 
+have a negative impact on performance and results in higher latency and slower page load times.
+
+## TCP
+
+Lets
+Establishing a TCP connection involves some overhead, if HTTPS is used, which is most often the case, each connection has to spend some more time securing it through the TLS protocol. 
+If a segment gets lost in transit, TCP will resend that after a timeout, blocking all other segments in the connection
+
+## QUIC
+
+HTTP/3 also offers multiplexed streams like HTTP/2 using QUIC in the transport layer. Data in a QUIC stream is split into smaller chunks called frames and transmitted in UDP packets. Frames inside a UDP packet will contain the sequence number and ID of a stream, so the receiver can reorder them if it is received out of order.
+
+
+
+QUIC is built on top of [UDP]() (User Datagram Protocol). The main difference 
+between TCP and UDP is that UDP is connectionless protocol which means that it 
+doesn't require formal connection to be established before sending data starts.
+When HTTP request starts a QUIC handshake is initiated 
+Google started work on an early version of QUIC in 2012.
+
+QUIC is designed to be fast and to support switching rapidly between networks
+
+1-RTT and 0-RTT
+
+In case some packet is lost QUIC detects it without waiting for a timeout
+
+QUIC maintains a connection state throughout the process. A connection state is 
+like a record of the ongoing conversation between the client (your computer) and the server.
+
+Once the exchange of requests and responses is completed, either the client or the server initiates the closure process, managed by the QUIC protocol.
+
+QUIC supports encryption by default, ensuring the security of all data exchanged between the client and server.
+
+TCP: packet loss or reordering can slow down high-transaction connections.
+
+QUIC separates out the layer 4 transport connection from the layer 3 IP flow, allowing for migration between different networks without disruption.
+QUIC can better support mobile-heavy Internet usage in which people carry smartphones and constantly switch from one network to another as they move about their day. 
+TCP vs QUIC
+
+QUIC solves: 
+Decreasing the effects of packet loss
+Faster connection establishment: 1-RTT or 0-RTT
+QUIC is encrypted by default, making HTTP/3 more secure than HTTP/2
+Protecting against HTTP/2 "Rapid Reset" distributed denial-of-service (DDoS) attacks, which can slow down or crash a web server, by using a credit-based system for streams (a "stream" is a single HTTP request and response exchange) to allow HTTP/3 servers fine-grained control over stream concurrency
+Developing a workaround for the sluggish performance when a smartphone switches from WiFi to cellular data, such as when leaving the house or office
+
+&nbsp;
+
+
+
+## 
+
+
+
+
+
+Reduced latency: QUIC’s zero-round-trip connection establishment allows for faster initial page loads and improved responsiveness.
+
+Multiplexing: Similar to HTTP2, QUIC enables multiple requests to be sent concurrently over a single connection, eliminating head-of-line blocking.
+
+Improved Security: QUIC supports encryption by default, ensuring the security of all data exchanged between the client and serve
+
