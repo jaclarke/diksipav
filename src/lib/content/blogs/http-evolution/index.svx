@@ -2,7 +2,7 @@
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: HTTP evolution (part 1 - HTTP/1 & HTTP/2)
 date: 2024-08-27
-desc: Do you know that HTTP/3 is available, majority of big browsers support it. And some big domains like Youtube, Facebook, Google, CNN already uses it!
+desc: Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like Youtube, Facebook, Google, CNN already use it!
 seoDesc: Explore the evolution of HTTP from its beginnings to HTTP/2 in this in-depth post. Learn about the key differences, improvements, and how these protocols impact web performance.
 tags: '#software #network'
 ---
@@ -48,10 +48,10 @@ accurately.
 The [OSI model](https://www.auvik.com/franklyit/blog/osi-model-explained/) is a 
 conceptual model for understanding how data flows across and within networks
 between its members (end-system members, switches, routers). The `seven layers` 
-of the OSI model from bottom to top are physical, data link, network, transport, 
+of the OSI model from bottom to top are: physical, data link, network, transport, 
 session, presentation, and application. All these layers work together to transmit 
-data over the network. `Aplication layer` is what end-users interact with daily, 
-and is where the communication begin. `HTTP` belongs to this layer (together 
+data over the network. `Application layer` is what end-users interact with daily, 
+and is where the communication begins. `HTTP` belongs to this layer (together 
 with `FTP` - File Transfer Protocol, `SMTP` - Simple Mail Transfer Protocol, 
 `DNS` - Domain Name System, and others). I suggest you get familiar with network 
 protocol layers and the responsibilities of each one (if you aren't already) before continuing.
@@ -61,7 +61,7 @@ protocol layers and the responsibilities of each one (if you aren't already) bef
 `TCP` operates at the `Transport layer` (Layer 4) of the OSI model. It promises 
 guaranteed delivery of messages it gets from the layer above to the destination.
 TCP also breaks long messages it receives into shorter segments and provides a congestion-control 
-mechanism. But, its minus is that every TCP connection requires a `three-way handshake` - 
+mechanism. But, a downside is that every TCP connection requires a `three-way handshake` - 
 a process used to establish a reliable connection between a client and a server 
 before data transmission begins. We will see in the next blog post how HTTP/3, 
 built on the `QUIC` protocol, eliminates the 3-way handshake entirely by using 
@@ -72,17 +72,17 @@ a connection establishment process that requires only a single round-trip.
 `HTTP/1` was introduced in 1996. Before that, there was `HTTP/0.9` - a simple protocol 
 that only supported GET method and had no headers or status codes. And it was 
 possible to transfer only HTML. 
-**HTTP/1.0 added headers, status codes, and additional methods(POST and HEAD).**
+**HTTP/1.0 added headers, status codes, and additional methods (POST and HEAD).**
 
 &nbsp;
 
 **In HTTP/1 every request to the same server required a separate TCP connection.**
 Which meant that every HTTP request triggered a TCP three-way handshake which is a time-consuming task. 
 If a web page contained multiple resources that have to be fetched (css, images, js), 
-new connection was needed for every resource (per every request). 
-Browser were designed to improve this a bit by openning couple concurrent connections, but there was a limit of parallel 
-TCP connections a browser can establish per domain (in order to not overload 
-the server or network). This limit was usually **6**.
+a new connection was needed for every resource (per every request). 
+Browsers were designed to improve this a bit by opening couple concurrent connections,
+but in order to not overload the server or network, there's a limit of parallel 
+TCP connections a browser can establish per domain. This limit is usually **6**.
 
 ## HTTP 1.1
 
@@ -91,8 +91,8 @@ It brought many improvements.
 
 ### Persistent connections 
 
-In HTTP/1.1 the TCP connection can be reused to execute several HTTP requests. 
-This improved performance because decreases number of 3-way-handshakes. But, the 
+In HTTP/1.1 a TCP connection can be reused to execute several HTTP requests. 
+This improved performance because it decreases the number of 3-way-handshakes. But, the 
 limit of 6 concurrent connections was still there. 
 
 <div class="img">
@@ -107,9 +107,9 @@ HTTP1/1 also introduced pipelining which allowed clients to send multiple reques
 waiting for each response. For example, when the browser sees that it 
 needs two images to render a web page, it can request them one after the other. 
 Pipelining further improved performance by reducing latency for each response, but was limited by `HOL(head-of-line)` 
-blocking issue when handling requests is blocked by one slow or blocked response. 
+blocking. This issue is where handling a later request is blocked by one slow or blocked earlier response. 
 Besides this, pipelining required special server and proxy support which was tricky to implement.
-Because all of this some browsers never implemented it and other disabled it by 
+Because of all of this some browsers never implemented it and other disabled it by 
 default after some time due to issues with compatibility and performance. 
 
 <div class="img">
@@ -121,7 +121,7 @@ default after some time due to issues with compatibility and performance.
 
 #### Head-of-Line (HOL) Blocking
 
-An issue that occures when multiple requests are queued over a single TCP connection. 
+An issue that occurs when multiple requests are queued over a single TCP connection. 
 If a single request in a pipeline takes longer to be processed by the server, it 
 delays the processing of all subsequent requests, because responses needed to come in order.
 
@@ -133,14 +133,14 @@ order, all subsequent packets are held up until the missing packet is retransmit
 
 ### Caching and Conditional Requests
 
-HTTP1/1 added `Cache-Control` header which provides more fine-grained control 
+HTTP1/1 added the `Cache-Control` header which provides more fine-grained control 
 over caching compared to the `Expires` header used in HTTP/1.0.
 It also added `ETags (Entity Tags)` - unique identifiers assigned to specific 
-versions of a resource (if a file changes, etag also changes). 
+versions of a resource (eg. if a file content changes, the etag also changes). 
 
 &nbsp;
 
-Conditional requests, using headers like `If-Modified-Since`(was available in 1.0) and `If-None-Match` (added in 1.1), 
+Conditional requests, using headers like `If-Modified-Since` (was available in 1.0) and `If-None-Match` (added in 1.1), 
 enabled clients to request resources only if they had been modified since a 
 previous request, saving bandwidth and improving performance. 
 
@@ -148,10 +148,10 @@ previous request, saving bandwidth and improving performance.
 
 When a browser caches a resource with an `ETag`, it can later use this ETag in an `If-None-Match`
 request header to ask the server if the resource has changed. If the resource 
-is unchanged, the server responds with a `304 Not Modified status`, otherwise 
-the server sends the new version with updated Etag. Conditional requests using 
-Etags are better than only using `max-age` header, because with later can happen that browser still uses old version 
-of the resource even though it has changed on the server.
+is unchanged, the server responds with a `304 Not Modified` status, otherwise 
+the server sends the new version with an updated Etag. Conditional requests using 
+Etags are better than only using the `max-age` header, because with the latter it can happen that
+the browser still uses the old version of the resource even though it has changed on the server.
 
 ### Chunked Transfer Encoding
 
@@ -161,12 +161,12 @@ know where the response body ended, which could cause issues with processing the
 
 &nbsp;
 
-HTTP1/1 introduced `Chunked Transfer Encoding`, which is a method for sending 
+HTTP/1.1 introduced `Chunked Transfer Encoding`, which is a method for sending 
 data in chunks rather than requiring the entire response to be sent in one go. 
 Each chunk is preceded by its size in bytes. The response ends with a zero-length chunk, 
 signaling the end of the data. This method allows the server to begin transmitting 
-data immediately, even if the total size is unknown, improving efficiency for certain types of content:
-streaming large amounts of data and for dynamic content generation where the total 
+data immediately, even if the total size is not known yet, improving efficiency for certain types of content, eg.
+streaming large amounts of data, or dynamic content generation where the total 
 content size is not known at the start of the response.
 
 ### More HTTP methods
@@ -198,12 +198,12 @@ serve static assets such as images, CSS, and JavaScript from subdomains and serv
 
 Despite the improvements introduced in HTTP/1.1, there were still many areas for 
 enhancement. Some of the "issues" were TCP's 3-way-handshake, limited parallelism 
-due to browser limiting connections per domain, HTTP1's text-based protocol and verbose headers,
+due to browsers limiting connections per domain, HTTP1's text-based protocol and verbose headers,
 TCP's slow start algorithm...
 
 #### TCP's slow start algorithm
 
-[This](https://developer.mozilla.org/en-US/docs/Glossary/TCP_slow_start) is a 
+[TCP slow start](https://developer.mozilla.org/en-US/docs/Glossary/TCP_slow_start) is a 
 congestion control mechanism used in TCP to manage the amount of data 
 sent over a network. It is designed to prevent network congestion by gradually 
 increasing the data transmission rate until network capacity is reached. But 
@@ -224,11 +224,11 @@ Binary protocols are less prone to errors and ambiguities that can arise from te
 
 HTTP/2 introduces the concept of `frames` and `streams`. In HTTP/2, messages are 
 divided into smaller units called frames. Specifically, the Data and Header 
-sections of an HTTP request or response are split into different frames — `Data frames` 
+sections of a HTTP request or response are split into different frames — `Data frames` 
 and `Header frames`. Each frame is associated with a specific stream, which represents 
 a single request-response pair. By splitting the message into frames, HTTP/2 enables more efficient processing and multiplexing of requests and responses. 
 Multiple frames from different streams (requests) can be sent over the same TCP connection, allowing for concurrent data transmission.
-Every frame contains a stream identifier in its header which helps client reassemble the data.
+Every frame contains a stream identifier in its header which helps the client reassemble the data.
 
 ### Multiplexing
 
@@ -245,7 +245,7 @@ HTTP/2 allows clients to assign priority levels to different streams. This is
 done to indicate which requests should be processed first. Prioritization helps 
 the server decide the order in which to allocate resources and send responses, 
 which can impact the perceived performance of a web page. With default multiplexing 
-responces can come in any order which is often not optimal for the client. For example, 
+responses can come in any order which is often not optimal for the client. For example, 
 if the server sends a large image before the main stylesheet, 
 the page might appear unstyled for a while, leading to a slower perceived load time.
 
@@ -264,9 +264,9 @@ Headers are compressed and sent in a more efficient format avoiding repetition.
 Server Push in HTTP/2 is a feature that allows the server to send resources to 
 the client proactively, without the client explicitly requesting them. This can 
 improve the performance of web applications by reducing the number of round-trip 
-requests needed to load a webpage. Server can anticipate which resources the client 
+requests needed to load a webpage. The server can anticipate which resources the client 
 will need  based on the initial request and sends them in advance. For example 
-when client asks for HTML page server can also send CSS and JS files, and images for that page.
+when the client asks for a HTML page, the server can also send CSS, JS and image files it knows are needed for that page.
 
 ### Challenges with HTTP/2
 
