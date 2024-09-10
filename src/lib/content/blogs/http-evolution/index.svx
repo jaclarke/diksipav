@@ -67,7 +67,7 @@ before data transmission begins. We will see in the next blog post how HTTP/3,
 built on the `QUIC` protocol, eliminates the 3-way handshake entirely by using 
 a connection establishment process that requires only a single round-trip.
 
-## HTTP 1.0 
+## HTTP/1.0 
 
 `HTTP/1` was introduced in 1996. Before that, there was `HTTP/0.9` - a simple protocol 
 that only supported GET method and had no headers or status codes. And it was 
@@ -84,9 +84,9 @@ Browsers were designed to improve this a bit by opening couple concurrent connec
 but in order to not overload the server or network, there's a limit of parallel 
 TCP connections a browser can establish per domain. This limit is usually **6**.
 
-## HTTP 1.1
+## HTTP/1.1
 
-HTTP/1.1 was published in 1997 and people usually refer to it when talking about HTTP1.
+HTTP/1.1 was published in 1997 and people usually refer to it when talking about HTTP/1.
 It brought many improvements.
 
 ### Persistent connections 
@@ -103,7 +103,7 @@ limit of 6 concurrent connections was still there.
 
 ### Pipelining 
 
-HTTP1/1 also introduced pipelining which allowed clients to send multiple requests over a single TCP connection without 
+HTTP/1.1 also introduced pipelining which allowed clients to send multiple requests over a single TCP connection without 
 waiting for each response. For example, when the browser sees that it 
 needs two images to render a web page, it can request them one after the other. 
 Pipelining further improved performance by reducing latency for each response, but was limited by `HOL(head-of-line)` 
@@ -133,7 +133,7 @@ order, all subsequent packets are held up until the missing packet is retransmit
 
 ### Caching and Conditional Requests
 
-HTTP1/1 added the `Cache-Control` header which provides more fine-grained control 
+HTTP/1.1 added the `Cache-Control` header which provides more fine-grained control 
 over caching compared to the `Expires` header used in HTTP/1.0.
 It also added `ETags (Entity Tags)` - unique identifiers assigned to specific 
 versions of a resource (eg. if a file content changes, the etag also changes). 
@@ -198,7 +198,7 @@ serve static assets such as images, CSS, and JavaScript from subdomains and serv
 
 Despite the improvements introduced in HTTP/1.1, there were still many areas for 
 enhancement. Some of the "issues" were TCP's 3-way-handshake, limited parallelism 
-due to browsers limiting connections per domain, HTTP1's text-based protocol and verbose headers,
+due to browsers limiting connections per domain, HTTP/1's text-based protocol and verbose headers,
 TCP's slow start algorithm...
 
 #### TCP's slow start algorithm
@@ -210,7 +210,7 @@ increasing the data transmission rate until network capacity is reached. But
 even though it is effective in general it has some 
 [limitations](https://www.sciencedirect.com/science/article/pii/S1319157812000146).
 
-## HTTP 2
+## HTTP/2
 
 In 2015, `HTTP/2` was launched to address some performance problems of HTTP/1 (HTTP/1.1).
 
