@@ -21,6 +21,7 @@
 		</p>
 		<p class="top-margin">I enjoy immersing myself in nature & doing outdoorsy stuff.</p>
 		<p>I LOVE to read. & sometimes I draw.</p>
+		<p class="partner-quest">Also on a quest to find a lasting, long-term partner.</p>
 		<div class="social-icons">
 			<a href="https://github.com/diksipav" target="_blank" class="icon"><GithubIcon /></a>
 			<a href="https://www.linkedin.com/in/diksipav/" target="_blank" class="icon"
@@ -41,6 +42,7 @@
 		flex-direction: column;
 		align-items: center;
 		grid-area: intro;
+		position: relative;
 
 		.img {
 			@include responsive(width, 180px, $xxl: 200px);
@@ -60,6 +62,12 @@
 			.top-margin {
 				margin-top: 16px;
 			}
+		}
+
+		.partner-quest {
+			font-size: 12px;
+			margin-top: -2px;
+			color: var(--pink);
 		}
 
 		.social-icons {
