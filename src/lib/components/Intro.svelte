@@ -21,7 +21,7 @@
 		</p>
 		<p class="top-margin">I enjoy immersing myself in nature & doing outdoorsy stuff.</p>
 		<p>I LOVE to read. & sometimes I draw.</p>
-		<p class="partner-quest">Also on a quest to find a lasting, long-term partner.</p>
+		<p class="partner-quest">Also on a quest to find a lasting, romantic partner.</p>
 		<div class="social-icons">
 			<a href="https://github.com/diksipav" target="_blank" class="icon"><GithubIcon /></a>
 			<a href="https://www.linkedin.com/in/diksipav/" target="_blank" class="icon"
