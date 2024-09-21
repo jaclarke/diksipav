@@ -1,7 +1,7 @@
 ---
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: Understanding the Internet — a broad picture
-date: 2024-08-27
+date: 2024-09-15
 desc: I've decided to write this post because I will also write about HTTP and TCP/UDP protocols that are used on the Internet. However, before diving into these protocols, it's essential to first understand what the Internet is, who its members are, and how they communicate with each other.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
 tags: '#software #internet #computer-networking'
