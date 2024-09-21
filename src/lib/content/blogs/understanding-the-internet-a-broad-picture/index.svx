@@ -2,7 +2,7 @@
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: Understanding the Internet — a broad picture
 date: 2024-09-15
-desc: I've decided to write this post because I will also write about HTTP and TCP/UDP protocols that are used on the Internet. However, before diving into these protocols, it's essential to first understand what the Internet is, who its members are, and how they communicate with each other.
+desc: This post is the first in a series exploring the Internet and various networking protocols. In this introduction, we’ll define what the Internet is, who its members are, and how they communicate with one another.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
 tags: '#software #internet #computer-networking'
 ---
@@ -81,9 +81,9 @@ into smaller, manageable tasks, where each layer handles a specific function.
 &nbsp;
 
 There are two widely recognized models that describe how protocol layering works: 
-the [OSI (Open Systems Interconnection)](https://aws.amazon.com/what-is/osi-model/) 
-model, which consists of seven layers, and the [TCP/IP](https://www.fortinet.com/resources/cyberglossary/tcp-ip) 
-model, which has four layers. In both models, data moves from the application 
+the [TCP/IP](https://www.fortinet.com/resources/cyberglossary/tcp-ip) model
+which has four layers, and the [OSI (Open Systems Interconnection)](https://aws.amazon.com/what-is/osi-model/) 
+model, which consists of seven layers. In both models, data moves from the application 
 layer (where users interact with applications) down to the physical layer 
 (where bits are transmitted as signals — whether electrical, optical or radio 
 frequency). It then travels across the network to the destination device, where 
@@ -106,3 +106,17 @@ layer above it. These headers are then used by the corresponding layers on the
 receiving side to interpret and process the data properly. You can also see how 
 routers and link-layer switches do not implement all of the layers in the protocol 
 stack. They typically implement only the bottom layers. 
+
+&nbsp;
+
+I'd like to acknowledge the invaluable resource [Computer Networking: A Top-Down Approach ](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)
+book by James Kurose and Keith Ross, which provides clear and comprehensive 
+explanations of the Internet and its underlying protocols.
+
+&nbsp;
+
+This will be all for now, stay tuned for the next post in this series, 
+where we'll take a closer look at the `TCP/IP` model to better understand how 
+data flows through its layers. 🚀
+
+
