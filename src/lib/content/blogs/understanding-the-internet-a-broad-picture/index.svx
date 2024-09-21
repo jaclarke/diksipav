@@ -1,0 +1,108 @@
+---
+id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
+title: Understanding the Internet — a broad picture
+date: 2024-08-27
+desc: I've decided to write this post because I will also write about HTTP and TCP/UDP protocols that are used on the Internet. However, before diving into these protocols, it's essential to first understand what the Internet is, who its members are, and how they communicate with each other.
+seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
+tags: '#software #internet #computer-networking'
+---
+
+# {title}
+
+<div class="heroImg">
+
+![Computer networks](./hero.png)
+
+</div>
+
+{desc}
+
+&nbsp;
+
+As you probably know, the `Internet` is an extensive network composed of countless 
+interconnected networks that function seamlessly across geographical and political 
+boundaries, enabling global communication and data exchange. Data flows between 
+its `end-systems` (computers, smartphones, tablets, and various `IoT` devices like cars, watches, home 
+appliances...) through `communication links`. These links can be made of various 
+physical media, such as coaxial cable, copper wire, optical fiber, or radio waves. 
+The speed at which each link transmits data varies and is measured in `bits per second`. 
+Communication links are connected by devices called packet switches. 
+
+&nbsp;
+
+A `packet switch` takes a packet arriving on one of its incoming communication
+links and forwards that packet on one of its outgoing communication links. Two
+of the most prominent types of packet switches in today's Internet are `routers` 
+and `link-layer switches`. Link-layer switches are typically used in access 
+networks, while routers are used in the network core. Access networks are parts 
+of the network where end devices connect to the Internet.
+
+&nbsp;
+
+Devices must first connect to the Internet before they can send or receive data.
+An `ISP (Internet Service Provider)` is a company or organization that provides 
+individuals, businesses, and other entities with access to the Internet. ISPs 
+enable customers to connect to the global Internet through a variety of technologies, 
+such as DSL, cable, fiber optics, wireless, satelite, or mobile data networks.
+
+<div class="img">
+
+![Internet and its members](./internet-members.png)
+
+<small>
+Internet and its members
+</small>
+</div>
+
+&nbsp;
+
+If you're curious how packet switches know which outgoing link to use when 
+forwarding data packets, it all comes down to addressing. Every device connected 
+to the Internet is assigned a unique identifier called an `IP address` — much like 
+how people in real life have home addresses. This IP address helps the network
+ensure that data is sent to the correct destination.
+
+&nbsp;
+
+To ensure smooth communication between end-systems, packet switches, and other 
+members of the Internet, all of them must **"speak the same language"**. This is where 
+`protocols` come in. Protocols are sets of rules that control the sending and 
+receiving of data across the Internet. They determine the format, timing, sequencing, 
+and error-checking methods used during communication between devices, ensuring 
+that the data is sent and received accurately. 
+
+&nbsp;
+
+There are many different protocols, and each protocol has a specific responsibility. 
+They work together in a layered structure known as `protocol layering`. The 
+idea is to break down the complex process of transmitting data between two devices
+into smaller, manageable tasks, where each layer handles a specific function.
+
+&nbsp;
+
+There are two widely recognized models that describe how protocol layering works: 
+the [OSI (Open Systems Interconnection)](https://aws.amazon.com/what-is/osi-model/) 
+model, which consists of seven layers, and the [TCP/IP](https://www.fortinet.com/resources/cyberglossary/tcp-ip) 
+model, which has four layers. In both models, data moves from the application 
+layer (where users interact with applications) down to the physical layer 
+(where bits are transmitted as signals — whether electrical, optical or radio 
+frequency). It then travels across the network to the destination device, where 
+the process is reversed, moving data back up through the layers.
+
+<div class="img">
+
+![Transmittion of data on the Internet through protocol layers](./protocol-layers.png)
+
+<small>
+Transmittion of data on the Internet through protocol layers
+</small>
+</div>
+
+&nbsp;
+
+The diagram above illustrates how data flows through protocol layers. On the 
+sending side, each layer adds its own header to the package it receives from the 
+layer above it. These headers are then used by the corresponding layers on the 
+receiving side to interpret and process the data properly. You can also see how 
+routers and link-layer switches do not implement all of the layers in the protocol 
+stack. They typically implement only the bottom layers. 

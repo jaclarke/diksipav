@@ -1,3 +1,15 @@
+---
+id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
+title: HTTP3
+date: 2024-09-21
+desc: Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like Youtube, Facebook, Google, CNN already use it!
+seoDesc: Explore the evolution of HTTP from its beginnings to HTTP/2 in this in-depth post. Learn about the key differences, improvements, and how these protocols impact web performance.
+tags: '#software #network'
+---
+
+
+HTTP/3 is the latest major version of HTTP and was oficially released in June 2022.
+
 ## 
 HTTP 3 uses QUIC
 
@@ -15,6 +27,13 @@ Multiplexing: Similar to HTTP2, QUIC enables multiple requests to be sent concur
 Improved Security: QUIC supports encryption by default, ensuring the security of all data exchanged between the client and server.
 
 The rise of QUIC paved the way for the development of HTTP3
+
+## QUIC
+
+QUIC is a transport layer network protocol initially developed by Google and 
+later adopted and finalised by the IETF (Internet Engineering Task Force). It is 
+designed to improve latency and security over the traditional TCP protocol 
+(which HTTP/2 uses). QUIC runs on top of UDP (User Datagram Protocol) rather than TCP. 
 
 ### Security
 

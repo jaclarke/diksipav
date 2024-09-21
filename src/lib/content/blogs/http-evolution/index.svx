@@ -17,14 +17,13 @@ tags: '#software #network'
 
 {desc} You can check it yourself [here](https://http3check.net/). 🎉 🎉
 
-&nbsp;
+<div class="note">
+<p>
+This post is under revision atm. Its first intro chapter is going to be updated.
+</p>
+</div>
 
-Initially I wanted to write a post on Server Sent Events but then
-found out about [web transport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)
-which led to [QUIC](https://developer.mozilla.org/en-US/docs/Glossary/QUIC) and 
-[HTTP/3](https://developer.mozilla.org/en-US/docs/Glossary/HTTP_3). And in order 
-to fully understand what's all the hype about `HTTP/3` we need to firstly grasp
-HTTP evolution prior to HTTP/3. 💪🏽
+
 
 ## Intro (for novices)
 
@@ -34,16 +33,7 @@ between web browsers (clients) and web servers. HTTP (together with lower networ
 what makes it possible for you to click on a link or enter a URL in your browser 
 and have the content from a web server displayed on your screen.
 
-#### Protocol
-
-A protocol in computing and telecommunications is a set of rules and standards 
-that define how data is transmitted and received across a network. Protocols 
-determine the format, timing, sequencing, and error-checking methods used during 
-communication between devices, ensuring that the data is sent and received 
-accurately.
-
-
-#### OSI model
+<!-- #### OSI model
 
 The [OSI model](https://www.auvik.com/franklyit/blog/osi-model-explained/) is a 
 conceptual model for understanding how data flows across and within networks
@@ -54,7 +44,7 @@ data over the network. `Application layer` is what end-users interact with daily
 and is where the communication begins. `HTTP` belongs to this layer (together 
 with `FTP` - File Transfer Protocol, `SMTP` - Simple Mail Transfer Protocol, 
 `DNS` - Domain Name System, and others). I suggest you get familiar with network 
-protocol layers and the responsibilities of each one (if you aren't already) before continuing.
+protocol layers and the responsibilities of each one (if you aren't already) before continuing. -->
 
 #### TCP (Transmission Control Protocol)
 
@@ -117,7 +107,6 @@ default after some time due to issues with compatibility and performance.
 ![HTTP/1.1 Pipelining](./pipelining.png)
 
 </div>
-
 
 #### Head-of-Line (HOL) Blocking
 

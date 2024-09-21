@@ -7,7 +7,10 @@ export interface FrontMatter {
 }
 
 export function getFilenameFromTitle(title: string, prefix: string) {
-	const fileNameParts = title.replace('/', ' ').toLowerCase().split('(');
+	const fileNameParts = title
+		.replace(/[\s/—]+/g, ' ')
+		.toLowerCase()
+		.split('(');
 	const fileName = `${prefix}/${fileNameParts[0].trim().split(' ').join('-')}`;
 
 	return fileName[fileName.length - 1] === '?' ? fileName.slice(0, -1) : fileName;
