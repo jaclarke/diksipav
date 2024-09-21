@@ -111,7 +111,8 @@ stack. They typically implement only the bottom layers.
 
 I'd like to acknowledge the invaluable resource [Computer Networking: A Top-Down Approach ](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)
 book by James Kurose and Keith Ross, which provides clear and comprehensive 
-explanations of the Internet and its underlying protocols.
+explanations of the Internet and its underlying protocols. The diagrams in this 
+post are taken from this book.
 
 &nbsp;
 
