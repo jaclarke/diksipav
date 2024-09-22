@@ -2,7 +2,7 @@
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: Understanding the Internet — a broad picture
 date: 2024-09-15
-desc: This post is the first in a series exploring the Internet and various networking protocols. In this introduction, we’ll define what the Internet is, who its members are, and how they communicate with one another.
+desc: This post is the first in a series exploring the Internet and various networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
 tags: '#software #internet #computer-networking'
 ---
@@ -109,15 +109,16 @@ stack. They typically implement only the bottom layers.
 
 &nbsp;
 
-I'd like to acknowledge the invaluable resource [Computer Networking: A Top-Down Approach ](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)
-book by James Kurose and Keith Ross, which provides clear and comprehensive 
-explanations of the Internet and its underlying protocols. The diagrams in this 
-post are taken from this book.
-
-&nbsp;
-
 This will be all for now, stay tuned for the next post in this series, 
 where we'll take a closer look at the `TCP/IP` model to better understand how 
 data flows through its layers. 🚀
 
+&nbsp;
 
+<div class="ending">
+
+I'd like to acknowledge the invaluable resource — <a href="https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149">Computer Networking: A Top-Down Approach </a>
+book by James Kurose and Keith Ross, which provides clear and comprehensive 
+explanations of the Internet and its underlying protocols. The diagrams in this 
+post are taken from this book.
+</div>
