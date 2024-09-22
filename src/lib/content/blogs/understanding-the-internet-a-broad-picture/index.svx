@@ -43,7 +43,7 @@ Devices must first connect to the Internet before they can send or receive data.
 An `ISP (Internet Service Provider)` is a company or organization that provides 
 individuals, businesses, and other entities with access to the Internet. ISPs 
 enable customers to connect to the global Internet through a variety of technologies, 
-such as DSL, cable, fiber optics, wireless, satelite, or mobile data networks.
+such as DSL, cable, fiber optics, wireless, satellite, or mobile data networks.
 
 <div class="img">
 
