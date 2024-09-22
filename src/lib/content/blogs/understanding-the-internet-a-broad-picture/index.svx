@@ -43,19 +43,23 @@ Communication links are connected by devices called `packet switches`.
 A packet switch takes a packet arriving on one of its incoming communication
 links and forwards that packet on one of its outgoing communication links. Two
 of the most prominent types of packet switches in today's Internet are `routers` 
-and `link-layer switches`. A link-layer switch connects multiple devices (like 
-computers and printers) within the same `local area network (LAN)`, typically 
-used in home networks or offices to manage wired connections. A LAN is a network 
-that connects devices within a relatively small and localized area, such as a 
-home, office, or school. 
+and `link-layer switches`. 
 
 &nbsp;
 
-Router, on the other hand, is responsible for connecting
-different networks, and for routing data between them. It connects your home 
-network (LAN) to the Internet. Used in homes and businesses to manage both wired 
-and wireless connections. Most routers today have built-in switch capabilities 
-so separate switches are commonly not seen at homes anymore. 
+A link-layer switch connects multiple devices (such as computers and printers) 
+within the same `local area network (LAN)`. 
+It is used primarily in wired networks, enabling devices within a localized 
+area — like a home, office, or school — to communicate with each other. 
+
+&nbsp;
+
+A router, on the other hand, connects different networks and is responsible for
+routing data between them. A router connects your home network (LAN) to the broader 
+Internet. Routers manage both wired and wireless connections, and most modern 
+routers include built-in switch capabilities. This means they can perform the 
+role of a switch within a home or small office network, which is why separate 
+switches are not as commonly seen in home networks today.
 
 <div class="img">
 
@@ -68,23 +72,27 @@ Internet and its members
 
 &nbsp;
 
-Devices must first connect to the Internet before they can send or receive data.
-An `ISP (Internet Service Provider)` is a company or organization that provides 
-individuals, businesses, and other entities with access to the Internet. ISPs 
-enable customers to connect to the global Internet through a variety of technologies, 
-such as DSL, cable, fiber optics, wireless, satellite, or mobile data networks.
-A `modem` is a device that connects your home network to the ISP in order to 
-bring Internet access to your home. Router than connects to the modem to share 
-the Internet with multiple devices, both wired and wireless. Nowadays router 
-and modem are typically combined in a single device.
+Devices must first connect to the Internet before they can send or receive data. 
+An `ISP (Internet Service Provider)` is a company that provides individuals, 
+businesses, and other organizations with Internet access. ISPs allow customers 
+to connect to the global Internet through various technologies like DSL, cable, 
+fiber optics, wireless, satellite, or mobile networks.
 
 &nbsp;
 
-If you're curious how packet switches know which outgoing link to use when 
-forwarding data packets, it all comes down to addressing. Every device connected 
-to the Internet is assigned a unique identifier called an `IP address` — much like 
-how people in real life have home addresses. This IP address helps the network
-ensure that data is sent to the correct destination.
+To bring the Internet into your home, a `modem` (short for modulator-demodulator) 
+is required. The modem translates the analog or light signals from your ISP into 
+digital data that your home devices can understand. However, a modem alone can 
+connect only one device to the Internet. That's where a router comes in. Since 
+most households have multiple devices that need Internet access, the router 
+connects to the modem to distribute the Internet connection to multiple devices, 
+both wired and wireless. While a router can manage local network traffic, it 
+needs a modem to connect to the broader Internet.
+
+&nbsp;
+
+Nowadays, modems and routers are often combined into a single device, commonly 
+referred to as a `gateway`, which simplifies the setup and handles both functions.
 
 &nbsp;
 
@@ -127,9 +135,23 @@ Transmittion of data on the Internet through protocol layers
 The diagram above illustrates how data flows through protocol layers. On the 
 sending side, each layer adds its own header to the package it receives from the 
 layer above it. These headers are then used by the corresponding layers on the 
-receiving side to interpret and process the data properly. You can also see how 
-routers and link-layer switches do not implement all of the layers in the protocol 
-stack. They typically implement only the bottom layers. 
+receiving side to interpret and process the data properly. 
+
+&nbsp;
+
+You can also see how routers and link-layer switches do not implement all of the layers in the protocol 
+stack. Link-layer switch operates at the `data link layer` (Layer 2) of the OSI 
+model. It connects devices within a local area network (LAN) and forwards data 
+frames based on `MAC` (Media Access Control) addresses. A MAC address is a unique
+identifier assigned to a network interface of the device (the hardware or software component 
+that connects a device to a network, like a Wi-Fi card or Ethernet port) for communication within a local network. 
+
+&nbsp;
+
+Router operates at the `network layer` (Layer 3) 
+of the OSI model. It routes data packets between different networks based on 
+`IP` addresses. IP (Internet Protocol) address is an address that identifies a 
+device on a network (either local or global) for routing data between networks.
 
 &nbsp;
 
