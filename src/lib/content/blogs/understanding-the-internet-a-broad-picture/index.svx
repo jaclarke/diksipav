@@ -19,31 +19,43 @@ tags: '#software #internet #computer-networking'
 
 &nbsp;
 
-As you probably know, the `Internet` is an extensive network composed of countless 
-interconnected networks that function seamlessly across geographical and political 
-boundaries, enabling global communication and data exchange. Data flows between 
-its `end-systems` (computers, smartphones, tablets, and various `IoT` devices like cars, watches, home 
-appliances...) through `communication links`. These links can be made of various 
-physical media, such as coaxial cable, copper wire, optical fiber, or radio waves. 
-The speed at which each link transmits data varies and is measured in `bits per second`. 
-Communication links are connected by devices called packet switches. 
+As you probably know, the `Internet` is a vast network of interconnected computers 
+and other devices that function seamlessly across geographical and political 
+boundaries, enabling global communication and data exchange. Internet is also `a 
+network of networks`, because it consists of countless smaller networks (home 
+networks, corporate networks...) that are interconnected to form a larger 
+global network. 
 
 &nbsp;
 
-A `packet switch` takes a packet arriving on one of its incoming communication
+Data flows between its `end-systems` (computers, smartphones, tablets, and various `IoT` devices like cars, watches, 
+and home appliances) through `communication links`, which are the physical or 
+wireless connections between devices. These links are made from different mediums, 
+each with unique characteristics. `Physical (wired) links` include copper wire, 
+coaxial cable, optical fiber, and hybrid fiber-coaxial (HFC), a combination of 
+fiber-optic and coaxial cables. `Wireless links` include radio waves (Wi-Fi), 
+cellular networks (4G, 5G), and satellite links. The speed at which each link 
+transmits data varies and is measured in `bits per second`. 
+
+&nbsp;
+
+Communication links are connected by devices called `packet switches`.
+A packet switch takes a packet arriving on one of its incoming communication
 links and forwards that packet on one of its outgoing communication links. Two
 of the most prominent types of packet switches in today's Internet are `routers` 
-and `link-layer switches`. Link-layer switches are typically used in access 
-networks, while routers are used in the network core. Access networks are parts 
-of the network where end devices connect to the Internet.
+and `link-layer switches`. A link-layer switch connects multiple devices (like 
+computers and printers) within the same `local area network (LAN)`, typically 
+used in home networks or offices to manage wired connections. A LAN is a network 
+that connects devices within a relatively small and localized area, such as a 
+home, office, or school. 
 
 &nbsp;
 
-Devices must first connect to the Internet before they can send or receive data.
-An `ISP (Internet Service Provider)` is a company or organization that provides 
-individuals, businesses, and other entities with access to the Internet. ISPs 
-enable customers to connect to the global Internet through a variety of technologies, 
-such as DSL, cable, fiber optics, wireless, satellite, or mobile data networks.
+Router, on the other hand, is responsible for connecting
+different networks, and for routing data between them. It connects your home 
+network (LAN) to the Internet. Used in homes and businesses to manage both wired 
+and wireless connections. Most routers today have built-in switch capabilities 
+so separate switches are commonly not seen at homes anymore. 
 
 <div class="img">
 
@@ -53,6 +65,18 @@ such as DSL, cable, fiber optics, wireless, satellite, or mobile data networks.
 Internet and its members
 </small>
 </div>
+
+&nbsp;
+
+Devices must first connect to the Internet before they can send or receive data.
+An `ISP (Internet Service Provider)` is a company or organization that provides 
+individuals, businesses, and other entities with access to the Internet. ISPs 
+enable customers to connect to the global Internet through a variety of technologies, 
+such as DSL, cable, fiber optics, wireless, satellite, or mobile data networks.
+A `modem` is a device that connects your home network to the ISP in order to 
+bring Internet access to your home. Router than connects to the modem to share 
+the Internet with multiple devices, both wired and wireless. Nowadays router 
+and modem are typically combined in a single device.
 
 &nbsp;
 
