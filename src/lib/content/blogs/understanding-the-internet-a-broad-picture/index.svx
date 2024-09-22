@@ -156,7 +156,7 @@ device on a network (either local or global) for routing data between networks.
 &nbsp;
 
 This will be all for now, stay tuned for the next post in this series, 
-where we'll take a closer look at the `TCP/IP` model to better understand how 
+where we'll take a closer look at the `OSI` model to better understand how 
 data flows through its layers. 🚀
 
 &nbsp;
