@@ -2,7 +2,7 @@
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: Understanding the Internet — a broad picture
 date: 2024-09-15
-desc: This post is the first in a series exploring the Internet and various networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.
+desc: This post is the first in a series exploring the Internet and some networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
 tags: '#software #internet #computer-networking'
 ---
@@ -86,8 +86,7 @@ digital data that your home devices can understand. However, a modem alone can
 connect only one device to the Internet. That's where a router comes in. Since 
 most households have multiple devices that need Internet access, the router 
 connects to the modem to distribute the Internet connection to multiple devices, 
-both wired and wireless. While a router can manage local network traffic, it 
-needs a modem to connect to the broader Internet.
+both wired and wireless.
 
 &nbsp;
 
@@ -143,8 +142,9 @@ You can also see how routers and link-layer switches do not implement all of the
 stack. Link-layer switch operates at the `data link layer` (Layer 2) of the OSI 
 model. It connects devices within a local area network (LAN) and forwards data 
 frames based on `MAC` (Media Access Control) addresses. A MAC address is a unique
-identifier assigned to a network interface of the device (the hardware or software component 
-that connects a device to a network, like a Wi-Fi card or Ethernet port) for communication within a local network. 
+identifier assigned to a network interface of the device (the hardware or 
+software component that connects a device to a network, like a Wi-Fi card or 
+Ethernet port) for communication within a local network. 
 
 &nbsp;
 
@@ -152,6 +152,9 @@ Router operates at the `network layer` (Layer 3)
 of the OSI model. It routes data packets between different networks based on 
 `IP` addresses. IP (Internet Protocol) address is an address that identifies a 
 device on a network (either local or global) for routing data between networks.
+So data-link layer uses MAC addresses for local communication between devices 
+on the same network. And network layer uses IP addresses for global communication  
+across multiple networks.
 
 &nbsp;
 
