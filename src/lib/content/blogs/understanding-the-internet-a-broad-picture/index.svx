@@ -153,8 +153,7 @@ of the OSI model. It routes data packets between different networks based on
 `IP` addresses. IP (Internet Protocol) address is an address that identifies a 
 device on a network (either local or global) for routing data between networks.
 So data-link layer uses MAC addresses for local communication between devices 
-on the same network. And network layer uses IP addresses for global communication  
-across multiple networks.
+on the same network. And network layer uses IP addresses for global communication across multiple networks.
 
 &nbsp;
 
