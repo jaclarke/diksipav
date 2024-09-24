@@ -170,9 +170,11 @@ responsibilities of each of its layers. 🚀
 &nbsp;
 
 <div class="ending">
-
-I'd like to acknowledge the invaluable resource — <a href="https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149">Computer Networking: A Top-Down Approach </a>
+<p>I'd like to acknowledge the invaluable resource — <a href="https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149">Computer Networking: A Top-Down Approach </a>
 book by James Kurose and Keith Ross, which provides clear and comprehensive 
 explanations of the Internet and its underlying protocols. The diagrams in this 
-post are taken from this book.
+post are taken from this book.</p>
+<br>
+<p>And I want to thank my amazing colleague and friend, <a href="https://github.com/jaclarke"> James</a>,
+for always taking the time to read my posts and provide great feedback. 🚀</p>
 </div>
