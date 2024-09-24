@@ -1,6 +1,6 @@
 ---
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
-title: Understanding the Internet — a broad picture
+title: Networks and protocols 101 — how the Internet connects the world
 date: 2024-09-15
 desc: This post is the first in a series exploring the Internet and some networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
@@ -86,11 +86,7 @@ digital data that your home devices can understand. However, a modem alone can
 connect only one device to the Internet. That's where a router comes in. Since 
 most households have multiple devices that need Internet access, the router 
 connects to the modem to distribute the Internet connection to multiple devices, 
-both wired and wireless.
-
-&nbsp;
-
-Nowadays, modems and routers are often combined into a single device, commonly 
+both wired and wireless. Nowadays, modems and routers are often combined into a single device, commonly 
 referred to as a `gateway`, which simplifies the setup and handles both functions.
 
 &nbsp;
@@ -120,6 +116,13 @@ layer (where users interact with applications) down to the physical layer
 frequency). It then travels across the network to the destination device, where 
 the process is reversed, moving data back up through the layers.
 
+&nbsp;
+
+Moving "up/down" through the layers is just a methaphor that helps describing order 
+of operations. The terms "up" and "down" are used because the `OSI` and `TCP/IP`
+models are often represented graphically as vertical stacks of layers, with the 
+`Application Layer` at the top and the `Physical Layer` at the bottom.
+
 <div class="img">
 
 ![Transmittion of data on the Internet through protocol layers](./protocol-layers.png)
@@ -138,8 +141,11 @@ receiving side to interpret and process the data properly.
 
 &nbsp;
 
-You can also see how routers and link-layer switches do not implement all of the layers in the protocol 
-stack. Link-layer switch operates at the `data link layer` (Layer 2) of the OSI 
+You can also see how routers and link-layer switches do not implement all of the 
+layers in the protocol stack. Which means that they do not process the entire range of tasks across 
+all layers of the network model. They only handle the tasks and 
+responsibilities associated with the first few bottom layers. Link-layer switch 
+operates at the `data link layer` (Layer 2) of the OSI 
 model. It connects devices within a local area network (LAN) and forwards data 
 frames based on `MAC` (Media Access Control) addresses. A MAC address is a unique
 identifier assigned to a network interface of the device (the hardware or 
@@ -158,8 +164,8 @@ on the same network. And network layer uses IP addresses for global communicatio
 &nbsp;
 
 This will be all for now, stay tuned for the next post in this series, 
-where we'll take a closer look at the `OSI` model to better understand how 
-data flows through its layers. 🚀
+where we'll take a closer look at the `TCP/IP` model to better understand 
+responsibilities of each of its layers. 🚀
 
 &nbsp;
 
