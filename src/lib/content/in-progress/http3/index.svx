@@ -84,3 +84,8 @@ If even a small amount of data is lost during transmission, TCP may not load oth
 TCP doesn’t work well across local area networks or personal area networks.
 
 UDP stands for user datagram protocol. Compared to TCP, the UDP network protocol is less reliable, but faster and more straightforward. It’s often used in situations where higher speeds are crucial, like in streaming or gaming.
+
+
+
+on life and living:
+Update: be realistic and dont employ falsy expectations!

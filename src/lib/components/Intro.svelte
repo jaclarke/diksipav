@@ -13,8 +13,7 @@
 		<p>Hi, I'm a software engineer & digital nomad from Serbia.</p>
 		<p>Former (maybe future) electronics engineer.</p>
 		<p class="top-margin">
-			I've primarily been focusing on JS/TS, but I'm also interested in other tech and non-tech
-			areas. My goal is to share some of my insights here.
+			By day, I code in JS and TS; by night, I dive into Rust, Zig, and Python. This is where I share my insights and adventures in tech.
 		</p>
 		<p class="top-margin">
 			Currently, building at <a href="https://www.edgedb.com/" target="_blank">EdgeDB</a>.
