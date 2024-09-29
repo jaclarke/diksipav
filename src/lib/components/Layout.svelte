@@ -13,7 +13,7 @@
 		}
 
 		@include breakpoint(xl) {
-			grid-template-columns: 1fr 632px 1fr;
+			grid-template-columns: 1fr 612px 1fr;
 		}
 	}
 </style>

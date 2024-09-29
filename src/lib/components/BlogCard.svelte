@@ -40,6 +40,7 @@
 		.date {
 			flex-shrink: 0;
 			padding-top: 17px;
+			max-width: 48px;
 			@include responsive(padding-top, 14px, $xl: 16px);
 		}
 
