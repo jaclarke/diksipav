@@ -21,7 +21,7 @@
 	.card {
 		display: flex;
 		gap: 20px;
-		@include responsive(padding, 2px 0px 12px 16px, $sm: 8px 0px 12px 20px);
+		@include responsive(padding, 2px 0px 12px 0px, $sm: 8px 0px 12px 20px);
 		border-radius: 8px;
 
 		h5 {
