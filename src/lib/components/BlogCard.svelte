@@ -3,29 +3,44 @@
 	import { format } from 'date-fns';
 
 	export let frontmatter: FrontMatter;
-	export let recent: boolean;
+	export let main: boolean = false;
 </script>
 
-<a class={`card ${recent ? 'recent' : ''}`} href={getFilenameFromTitle(frontmatter.title, 'read')}>
+<a class={`card ${main ? 'main' : ''}`} href={getFilenameFromTitle(frontmatter.title, 'read')}>
+	<small class="date">{format(new Date(frontmatter.date), 'MMM dd,  yyyy')}</small>
+<div>
 	<h5>{frontmatter.title}</h5>
-	{#if recent}
-		<small>{format(new Date(frontmatter.date), 'yyyy-MM-dd')}</small>
-	{/if}
-	<p class="desc">{@html frontmatter.desc}</p>
+	{#if main} 
+<p class="desc">{@html frontmatter.desc}</p>
+ {/if} 
 	<small class={isNotItPost(frontmatter.tags) ? 'notIt' : ''}>{frontmatter.tags}</small>
+</div>
 </a>
 
 <style lang="scss">
 	.card {
-		display: block;
-		border: 1px solid transparent;
-		@include responsive(padding, 2px 16px 12px 16px, $sm: 10px 24px 20px 24px);
-		margin-bottom: 16px;
+		display: flex;
+		gap: 20px;
+		@include responsive(padding, 2px 0px 12px 16px, $sm: 8px 0px 12px 20px);
 		border-radius: 8px;
-		transition: border-color 0.4s;
+
+		h5 {
+			padding-bottom: 2px;
+			transition: color 0.4s;
+		}
 
 		&:hover {
-			border-color: var(--card-border-hover-color);
+			border: none;
+
+			h5 {
+				color : var(--link-color)
+			}
+		}
+
+		.date {
+			flex-shrink: 0;
+			padding-top: 17px;
+			@include responsive(padding-top, 14px, $xl: 16px);
 		}
 
 		.desc {
@@ -43,7 +58,11 @@
 		}
 	}
 
-	.recent {
-		border: 1px solid var(--card-border-color);
+	.main {
+		gap: 12px;
+.date {
+	max-width: 48px;
+}
+
 	}
 </style>

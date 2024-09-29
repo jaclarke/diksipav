@@ -19,7 +19,7 @@
 <Layout>
 	<div class="wrapper">
 		{#each data.blogs as frontmatter, i (frontmatter.id)}
-			<BlogCard {frontmatter} recent={i < 3 ? true : false} />
+			<BlogCard {frontmatter}/>
 		{/each}
 	</div>
 </Layout>

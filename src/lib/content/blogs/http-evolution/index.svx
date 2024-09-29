@@ -11,7 +11,7 @@ tags: '#software #network'
 
 <div class="heroImg">
 
-![HTTP/3 image](./hero.png)
+![HTTP/3](./hero.png)
 
 </div>
 

@@ -62,12 +62,6 @@
 			}
 		}
 
-		.partner-quest {
-			font-size: 12px;
-			margin-top: -2px;
-			color: var(--pink);
-		}
-
 		.social-icons {
 			display: flex;
 			justify-content: center;
