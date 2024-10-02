@@ -47,10 +47,10 @@
 	}
 	.mountain-top {
 		position: absolute;
-		right: -43px;
-		border-left: 43px solid transparent;
-		border-right: 43px solid transparent;
-		border-bottom: 51px solid var(--mountain-top);
+		right: -44px;
+		border-left: 44px solid transparent;
+		border-right: 44px solid transparent;
+		border-bottom: 52px solid var(--mountain-top);
 		z-index: 2;
 	}
 	.mountain-cap-1,

@@ -1,5 +1,5 @@
 ---
-id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
+id: 2a37b1f0-0017-11ea-9149-d386e8a6bfaa
 title: Networks and protocols 101 — how the Internet connects the world
 date: 2024-09-15
 desc: This post is the first in a series exploring the Internet and some networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.

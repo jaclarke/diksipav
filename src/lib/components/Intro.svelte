@@ -13,7 +13,8 @@
 		<p>Hi, I'm a software engineer & digital nomad from Serbia.</p>
 		<p>Former (maybe future) electronics engineer.</p>
 		<p class="top-margin">
-			By day, I code in JS and TS; by night, I dive into Rust, Zig, and Python. This is where I share my insights and adventures in tech.
+			By day, I code in JS and TS; by night, I dive into Rust, Zig, and Python. This is where I
+			share my insights and adventures in tech.
 		</p>
 		<p class="top-margin">
 			Currently, building at <a href="https://www.edgedb.com/" target="_blank">EdgeDB</a>.
@@ -81,7 +82,11 @@
 		position: absolute;
 		@include responsive(bottom, -36px, $lg: -48px, $xl: -68px);
 		@include responsive(right, 256px, $lg: 170px, $xl: 204px);
-		opacity: 0.3;
+		opacity: 0.7;
 		z-index: -1;
+
+		@include darkTheme {
+			opacity: 0.4;
+		}
 	}
 </style>

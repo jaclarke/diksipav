@@ -16,6 +16,7 @@
 	});
 
 	function toggleTheme() {
+		console.log('too');
 		theme = theme === 'light' ? 'dark' : 'light';
 		document.documentElement.setAttribute('data-theme', theme);
 		localStorage.setItem('theme', theme);
